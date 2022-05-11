@@ -18,4 +18,13 @@
 - Discover Covid 19 trends across multiple years.
 
 ## Machine Learning Model:
-- 
+- Using Python and Jupyter Notebooks/Google Colab for learning model
+- Regression or Unsupervised machine learning
+- Inputs: TBD
+- Output/Target: Number of positive COVID cases in a county/state
+
+# Team Communication Protocals
+- Slack channel for team members
+- Zoom for live collaboration
+- Tues/Thurs during class time
+- Additional day as needed
