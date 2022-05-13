@@ -7,8 +7,11 @@
 - Using Housing Dataset from Kaggle https://www.kaggle.com/code/thuynyle/hawai-i-s-housing-market-post-covid/data
 
 ### Data Cleansing:
-- Dropping Fips column.
-- Creating a combined key to join tables using county/state
+
+- Dropping Fips column from the covid dataset
+- Creating a combined key to join tables using county/state from covid datasets
+- Using the housing dataset, we have dropped years before 2020 in the spreadsheet to make it easier
+- We will drop uncessary columns from the housing dataset
 
 ### Reasons why we selected the topic:
  -  It is something that affects everyone.
@@ -23,6 +26,7 @@
 - Regression or Unsupervised machine learning
 - Inputs: TBD
 - Output/Target: Number of positive COVID cases in a county/state
+- Output/Target: To determine if house prices increased or decreased as the covid cases increased or decreased
 
 ### Data visualization tools
 - Tableau
@@ -32,3 +36,4 @@
 - Zoom for live collaboration
 - Tues/Thurs during class time
 - Additional day as needed
+
