@@ -7,6 +7,7 @@
 - Using Housing Dataset from Kaggle https://www.kaggle.com/code/thuynyle/hawai-i-s-housing-market-post-covid/data
 
 ### Data Cleansing:
+
 - Dropping Fips column from the covid dataset
 - Creating a combined key to join tables using county/state from covid datasets
 - Using the housing dataset, we have dropped years before 2020 in the spreadsheet to make it easier
