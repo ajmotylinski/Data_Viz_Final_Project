@@ -1,4 +1,4 @@
-# Predicting Quarter 3 & 4 Covid Cases for 2022
+# Predicting COVID-19 cases for 2022
 
 ### Data Source:
 - Using Covid Dataset from https://github.com/nytimes/covid-19-data
@@ -15,8 +15,8 @@
  -  Given historical data, we want to predict future cases for 3 and 4 quarter for 2022
  
 ### Questions we hope to answer:
-- What will be the covid cases for Q2 & Q3 of 2022 by County and State
-- Discover Covid 19 trends across multiple years
+- What will be the covid cases for 2022 by County and State.
+- Discover Covid 19 trends across multiple years.
 
 ### Machine Learning Model:
 - Using Python and Jupyter Notebooks/Google Colab for learning model
