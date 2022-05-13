@@ -29,7 +29,7 @@
 - Output/Target: To determine if house prices increased or decreased as the covid cases increased or decreased
 
 ### Data visualization tools
-- Tableau
+- Tableau will be used to create vizualizations.
 
 ### Team Communication Protocals
 - Slack channel for team members
