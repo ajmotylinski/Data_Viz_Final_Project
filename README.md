@@ -8,7 +8,7 @@
 - We will be using SQL Database for this project (see screenshot below)
 
 #### Database Screenshot
-![Database Screenshot.png]https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Database%20Screenshot%20(Week%201).png)
+![Database Screenshot (Week 1).png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Database%20Screenshot%20(Week%201).png)
 
 ### Web Scrapping:
 - Used web scrapping technique to get data from the US Social Security Administration website (https://www.ssa.gov/international/coc-docs/states.html) to create code
