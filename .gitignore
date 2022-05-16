@@ -10,6 +10,16 @@ __pycache__/
 # C extensions
 *.so
 
+# CSV and Excel Files
+us-counties-2020.CSV
+us-counties-2021.CSV
+50_us_states_all_data.CSV
+2020 county_market_tracker2.xlsx
+2021 county_market_tracker2.xlsx
+2021 CountyMarkerTracker.xlsx
+2020 CountyMarkerTracker.xlsx
+
+
 # Distribution / packaging
 .Python
 build/
