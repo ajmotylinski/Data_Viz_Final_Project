@@ -2,13 +2,18 @@
 
 ### Data Source:
 - Using Covid Dataset from https://github.com/nytimes/covid-19-data
-- We will be using SQL Database for this project
 - Tables used for this project: us-counties-2020.csv, us-counties-2021.csv and us-counties-2022 files
 - Using Housing Dataset from Kaggle https://www.kaggle.com/code/thuynyle/hawai-i-s-housing-market-post-covid/data
 - Obtained US State and state abbreviation dataset from Social Security Administration website (https://www.ssa.gov/international/coc-docs/states.html)
+- Added CSV Files and Excel Files to the GitIgnore
+- We will be using SQL Database for this project (see screenshot below)
+
+#### Database Screenshot
+![Database Screenshot (Week 1).png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Database%20Screenshot%20(Week%201).png)
 
 ### Web Scrapping:
-- Used web scrapping technique to get data from the US Social Security Administration website (https://www.ssa.gov/international/coc-docs/states.html) to create code table for US-State and abbreviation
+- Used web scrapping technique to get data from the US Social Security Administration website (https://www.ssa.gov/international/coc-docs/states.html) to create code
+- table for US-State and abbreviation
 
 ### Data Cleansing:
 - Dropping Fips column from the covid dataset
