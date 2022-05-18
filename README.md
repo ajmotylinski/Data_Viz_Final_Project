@@ -40,6 +40,9 @@
 ### Data visualization tools
 - Tableau will be used to create vizualizations
 
+### Presentation Link
+https://docs.google.com/presentation/d/1bv3LSd37Qxwq-3BTp1zodWL7fH8tMsefu9D7WUe0sQY/edit?usp=sharing
+
 ### Team Communication Protocals
 - Slack channel for team members
 - Zoom for live collaboration
