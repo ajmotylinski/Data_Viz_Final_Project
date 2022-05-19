@@ -23,7 +23,7 @@
 - We will drop uncessary columns from the housing dataset
 
 ### Reasons why we selected the topic:
- -  COVID is something that affects everyone
+ -  There is a perception that COVID-19 had immensely effected the housing market all over the United States, our project will discover if that anology is correct and their correlation
  -  Given historical data, we want to predict future COVID-19 cases and housing prices for 2022
  
 ### Questions we hope to answer:
