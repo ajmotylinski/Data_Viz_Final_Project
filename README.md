@@ -4,7 +4,7 @@
 - Using Covid Dataset from https://github.com/nytimes/covid-19-data
 - Tables used for this project: us-counties-2020.csv, us-counties-2021.csv and us-counties-2022 files
 - Using Housing Dataset from Kaggle https://www.kaggle.com/code/thuynyle/hawai-i-s-housing-market-post-covid/data
-- Obtained US State and state abbreviation dataset from scottechnology.com/list_of_50_state
+- Obtained US State and state abbreviation dataset from [scottechnology.com/list_of_50_state](https://scottontechnology.com/alphabetical-50-us-states-abbreviations-list/)
 - Added CSV Files and Excel Files to the GitIgnore
 - We will be using SQL Database for this project (see screenshot below)
 
