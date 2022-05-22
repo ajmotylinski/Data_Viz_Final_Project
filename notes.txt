@@ -1,0 +1,7 @@
+notes for 5/19:
+- Uploaded Tables into DB
+- Decided to rollup the dates in housing data set to Months
+- Primary key is going to be Month-State combined key
+- Cleaning COVID Datasets
+	- Created new table with only selected states (MN, CA, TX, FL) and -- called it covid_counts_2020_2021_by_state
+	- dropped fips and county from the COVID dataset
