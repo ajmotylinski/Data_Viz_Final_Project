@@ -5,3 +5,14 @@ notes for 5/19:
 - Cleaning COVID Datasets
 	- Created new table with only selected states (MN, CA, TX, FL) and -- called it covid_counts_2020_2021_by_state
 	- dropped fips and county from the COVID dataset
+
+
+notes for 5/21"
+- Reveiwed April's data cleanup.
+- Removed columns in both tables.
+- added primary keys in both tables.
+
+notes for 5/24:
+- Created new covid table
+- joined covid and states table to get the two letter abbriveation
+- added primary key on the tables
