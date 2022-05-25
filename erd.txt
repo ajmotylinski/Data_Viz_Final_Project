@@ -68,11 +68,3 @@ state_name_title_case
 state_two_letter_abbreviation
 state_ap_style_abbreviations
 
-us_counties_2020
--
-date
-county
-state FK >- states.state_two_letter_abbreviation
-fips
-cases
-deaths
