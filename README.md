@@ -32,8 +32,8 @@
 ### Machine Learning Model: Unsupervised 
 - Using Jupyter Notebook to connect to the SQL database
 - Using Clustering (k-means) as the unsupervised machine learning model. This model was chosen to help identify how the data is clustered together. 
- - Benefits of k-means is that is it easy to use and works well on large datasets. It also works well with different shapes and sizes of clusters.
- - Limits of k-means is that the number of clusters need to be select before the model. This can be mitigated by looking at the elbow curve to determine the optimal number of clusters. Outliers could have a significant impact on the clusters.
+  - Benefits of k-means is that is it easy to use and works well on large datasets. It also works well with different shapes and sizes of clusters.
+  - Limits of k-means is that the number of clusters need to be select before the model. This can be mitigated by looking at the elbow curve to determine the optimal number of clusters. Outliers could have a significant impact on the clusters.
 - Inputs: COVID-19 cases, deaths and the housing data
 - Output/Target: Number of COVID-19 cases and housing in the selected states
 - Output/Target: To determine if house prices decreased as the COVID-19 cases increased or decreased
