@@ -34,7 +34,10 @@
 - Output/Target: To determine if house prices decreased as the COVID-19 cases increased or decreased
 
 ### Data visualization tools
-- Tableau will be used to create data vizualizations
+- We used Tableau to create the Dashboard
+- ![Tableau Dashboard 1.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/COVID_Cases_Screenshot_1.png)
+- ![Tableau Dashboard 2.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/COVID_Case_Screenshot_2.png)
+- 
 
 ### Presentation Link
 https://docs.google.com/presentation/d/1bv3LSd37Qxwq-3BTp1zodWL7fH8tMsefu9D7WUe0sQY/edit?usp=sharing
