@@ -2,18 +2,15 @@
 
 ### Data Source:
 - Using Covid Dataset from https://github.com/nytimes/covid-19-data
+- Alternate source of Covid cases: https://healthdata.gov/dataset/United-States-COVID-19-Cases-and-Deaths-by-State-o/hiyb-zgc2
 - Tables used for this project: us-counties-2020.csv, us-counties-2021.csv and us-counties-2022 files
 - Using Housing Dataset from Kaggle https://www.kaggle.com/code/thuynyle/hawai-i-s-housing-market-post-covid/data
-- Obtained US State and state abbreviation dataset from Social Security Administration website (https://www.ssa.gov/international/coc-docs/states.html)
+- Obtained US State and state abbreviation dataset from [scottechnology.com/list_of_50_state](https://scottontechnology.com/alphabetical-50-us-states-abbreviations-list/)
 - Added CSV Files and Excel Files to the GitIgnore
 - We will be using SQL Database for this project (see screenshot below)
 
 #### Database Screenshot
 ![Database Screenshot (Week 1).png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Database%20Screenshot%20(Week%201).png)
-
-### Web Scrapping:
-- Used web scrapping technique to get data from the US Social Security Administration website (https://www.ssa.gov/international/coc-docs/states.html) to create code
-- table for US-State and abbreviation
 
 ### Data Cleansing:
 - Dropping Fips column from the covid dataset
@@ -23,7 +20,7 @@
 - We will drop uncessary columns from the housing dataset
 
 ### Reasons why we selected the topic:
- -  COVID is something that affects everyone
+ -  There is a perception that COVID-19 had immensely effected the housing market all over the United States, our project will discover if that anology is correct and their correlation
  -  Given historical data, we want to predict future COVID-19 cases and housing prices for 2022
  
 ### Questions we hope to answer:
@@ -38,7 +35,10 @@
 - Output/Target: To determine if house prices increased or decreased as the covid cases increased or decreased
 
 ### Data visualization tools
-- Tableau will be used to create vizualizations
+- Tableau will be used to create data vizualizations
+
+### Presentation Link
+https://docs.google.com/presentation/d/1bv3LSd37Qxwq-3BTp1zodWL7fH8tMsefu9D7WUe0sQY/edit?usp=sharing
 
 ### Team Communication Protocals
 - Slack channel for team members
