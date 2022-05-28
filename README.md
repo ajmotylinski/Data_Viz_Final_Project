@@ -1,20 +1,18 @@
-# Forecasting the Correlation(s) between COVID-19 Cases and Housing Prices for 2022
+# Forecasting the Correlation(s) between COVID-19 Cases and Housing Data
 
 ### Data Source:
-- Using Covid Dataset from https://github.com/nytimes/covid-19-data
-- Alternate source of Covid cases: https://healthdata.gov/dataset/United-States-COVID-19-Cases-and-Deaths-by-State-o/hiyb-zgc2
-- Tables used for this project: us-counties-2020.csv, us-counties-2021.csv and us-counties-2022 files
-- Using Housing Dataset from Kaggle https://www.kaggle.com/code/thuynyle/hawai-i-s-housing-market-post-covid/data
+- COVID-19 Data: https://healthdata.gov/dataset/United-States-COVID-19-Cases-and-Deaths-by-State-o/hiyb-zgc2
+- Housing Data: https://www.kaggle.com/code/thuynyle/hawai-i-s-housing-market-post-covid/data
 - Obtained US State and state abbreviation dataset from [scottechnology.com/list_of_50_state](https://scottontechnology.com/alphabetical-50-us-states-abbreviations-list/)
-- Added CSV Files and Excel Files to the GitIgnore
+
+
+#### SQL Database
 - We will be using SQL Database for this project (see screenshot below)
 
-#### Database Screenshot
-![Database Screenshot (Week 1).png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Database%20Screenshot%20(Week%201).png)
 
-### Data Cleansing:
-- Dropping Fips column from the covid dataset
-- Creating a combined key to join tables using county/state from covid datasets
+### Data Cleaning-SQL:
+- Dropping Fips column from the C dataset
+- Creating a combined key to join tables using county/state from covid dataset
 - Using the housing dataset, we have dropped years before 2020 in the spreadsheet to make it easier
 - We split the remaning housing data into four spreadsheets two each for 2020 and 2021, so that queries run more effeciently (less columns to go through)
 - We will drop uncessary columns from the housing dataset
@@ -24,8 +22,8 @@
  -  Given historical data, we want to predict future COVID-19 cases and housing prices for 2022
  
 ### Questions we hope to answer:
-- What will be the covid cases for 2022 by County and State?
-- Discover Covid 19 trends across multiple years
+- What is the relationship between COVID-19 cases and the Housing Market by a selection of States (CA, WA, TX, FL, MN) 
+-
 
 ### Machine Learning Model:
 - Using Python and Jupyter Notebook for learning model
