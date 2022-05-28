@@ -2,9 +2,10 @@
 
 ### Data Source:
 - Using Covid Dataset from https://github.com/nytimes/covid-19-data
+- Alternate source of Covid cases: https://healthdata.gov/dataset/United-States-COVID-19-Cases-and-Deaths-by-State-o/hiyb-zgc2
 - Tables used for this project: us-counties-2020.csv, us-counties-2021.csv and us-counties-2022 files
 - Using Housing Dataset from Kaggle https://www.kaggle.com/code/thuynyle/hawai-i-s-housing-market-post-covid/data
-- Obtained US State and state abbreviation dataset from scottechnology.com/list_of_50_state
+- Obtained US State and state abbreviation dataset from [scottechnology.com/list_of_50_state](https://scottontechnology.com/alphabetical-50-us-states-abbreviations-list/)
 - Added CSV Files and Excel Files to the GitIgnore
 - We will be using SQL Database for this project (see screenshot below)
 
@@ -34,7 +35,7 @@
 - Output/Target: To determine if house prices increased or decreased as the covid cases increased or decreased
 
 ### Data visualization tools
-- Tableau will be used to create vizualizations
+- Tableau will be used to create data vizualizations
 
 ### Presentation Link
 https://docs.google.com/presentation/d/1bv3LSd37Qxwq-3BTp1zodWL7fH8tMsefu9D7WUe0sQY/edit?usp=sharing
