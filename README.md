@@ -10,7 +10,7 @@
 - We will be using SQL Database for this project (see screenshot below)
 - ![Database Screenshot Week 2.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/COVID_%26_HOUSING_DATABASE.png)
 
-### Data Cleaning-SQL:
+### Data Cleaning and Preprocessin-SQL: 
 -  From the COVID-19 dataset we extracted the month and year from the period-begin
 - 
 - Dropping Fips column from the C dataset
@@ -28,19 +28,18 @@
 
 ### Machine Learning Model: Unsupervised 
 - Using Jupyter Notebook to connect to the SQL database
-- Using Clustering as an Unsupervised Machine learning
+- Using Clustering as the model choice
 - Inputs: COVID-19 cases, deaths and the housing data
 - Output/Target: Number of COVID-19 cases and housing in the selected states
 - Output/Target: To determine if house prices decreased as the COVID-19 cases increased or decreased
 
-### Data visualization tools
+### Data visualization tools: Tableau
 - We used Tableau to create the Dashboard
-- ![Tableau Dashboard 1.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/COVID_Cases_Screenshot_1.png)
-- ![Tableau Dashboard 2.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/COVID_Case_Screenshot_2.png)
-- 
+ ![Tableau Dashboard 1.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/COVID_Cases_Screenshot_1.png)
+ ![Tableau Dashboard 2.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/COVID_Case_Screenshot_2.png)
 
 ### Presentation Link
-https://docs.google.com/presentation/d/1bv3LSd37Qxwq-3BTp1zodWL7fH8tMsefu9D7WUe0sQY/edit?usp=sharing
+![Presentation link.com].png]https://docs.google.com/presentation/d/1bv3LSd37Qxwq-3BTp1zodWL7fH8tMsefu9D7WUe0sQY/edit?usp=sharing
 
 ### Team Communication Protocals
 - Slack channel for team members
