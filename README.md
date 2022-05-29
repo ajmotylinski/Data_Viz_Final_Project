@@ -1,4 +1,4 @@
-# Analyzing the Relationships between COVID-19 and Housing Data
+# Analyzing the Relationships Between COVID-19 and Housing Data
 
 ### Presentation Link
 [Google Slides Here](https://docs.google.com/presentation/d/1bv3LSd37Qxwq-3BTp1zodWL7fH8tMsefu9D7WUe0sQY/edit?usp=sharing)
@@ -55,11 +55,11 @@
 - Add Foreign Key to Add Primary Key to covid_daily_info
 - Join Tables covid_daily_info and states
 
-### Reasons why we selected the topic:
+### Reason(s) Why We Selected the Topic:
  -  There is a perception that COVID-19 had immensely effected the housing market all over the United States, our project will discover if that anology is correct and their correlation
  -  We want to understand how COVID-19 impacts the housing market
  
-### Questions we hope to answer:
+### Questions We Hope to Answer:
 - What is the relationship between COVID-19 cases and the housing market by a selection of states (CA, WA, TX, FL, MN) 
 
 ### Machine Learning Model: Unsupervised 
@@ -71,7 +71,7 @@
 - Output/Target: Number of COVID-19 cases and housing in the selected states
 - Output/Target: To determine if house prices decreased as the COVID-19 cases increased or decreased
 
-### Data visualization tools: Tableau
+### Data Visualization Tools: Tableau
 - We used Tableau to create the Dashboard
 - We added an interactive filter for state on the dashboard. The dashboard can display information for all states (MN, FL, TX, CA, WA) or any combination of them.
 - An action filter was also added to both the pie chart and the bar graph. If you select a single state on either of these the dashboard filters to show the details for that state.
@@ -79,7 +79,7 @@
  ![Tableau Dashboard 2.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/COVID_Case_Screenshot_2.png)
 
 
-### Team Communication Protocals
+### Team Communication Protocols
 - Slack channel for team members
 - Zoom for live collaboration
 - Tues/Thurs during class time
