@@ -1,4 +1,4 @@
-# Forecasting the Correlation(s) between COVID-19 Cases and Housing Data
+# Analyzing the Relationships between COVID-19 and Housing Data
 
 ### Presentation Link
 [Google Slides Here](https://docs.google.com/presentation/d/1bv3LSd37Qxwq-3BTp1zodWL7fH8tMsefu9D7WUe0sQY/edit?usp=sharing)
@@ -13,14 +13,34 @@
 - We will be using SQL Database for this project (see screenshot below)
 - ![Database Screenshot Week 2.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/COVID_%26_HOUSING_DATABASE.png)
 
-### Data Cleaning and Preprocessin-SQL: 
--  From the COVID-19 dataset we extracted the month and year from the period-begin
-- 
-- Dropping Fips column from the C dataset
-- Creating a combined key to join tables using county/state from covid dataset
-- Using the housing dataset, we have dropped years before 2020 in the spreadsheet to make it easier
-- We split the remaning housing data into four spreadsheets two each for 2020 and 2021, so that queries run more effeciently (less columns to go through)
-- We will drop uncessary columns from the housing dataset
+### Data Cleaning and Preprocessing-SQL: 
+#### Data Cleaned, but Not Used
+-  We originally cleaned a couple datasets from https://github.com/nytimes/covid-19-data before realizing the data was cummulative and didn't meet our needs
+#### Housing Data
+- Create Table – housing_data_2020_2021_by_state
+- Table Column – period_begin_month_year
+- Drop Column - County
+- Table Column – period_begin_month
+- Table Column – period_begin_ year
+- Update/Fill period_begin_year
+- Update/Fill period_begin_month
+- Update/Fill period_begin_month_year
+- Add Column – housing_month_year_state
+- Update/Fill – housing_month_year_state
+- Drop Columns - 
+- DROP COLUMN	period_end, period_duration, region_type, region_type_id, table_id, is_seasonally_adjusted, region, city, median_sale_price_mom, median_sale_price_yoy, median_list_price_mom, median_list_price_yoy, median_ppsf_mom, median_ppsf_yoy,	median_list_ppsf_mom, median_list_ppsf_yoy, homes_sold_mom, homes_sold_yoy, pending_sales_mom, pending_sales_yoy, new_listings_mom, new_listings_yoy, inventory_mom, inventory_yoy, months_of_supply_mom, months_of_supply_yoy,	median_dom_mom,	median_dom_yoy, avg_sale_to_list_mom, avg_sale_to_list_yoy, sold_above_list_mom, sold_above_list_yoy, price_drops_mom,	price_drops_yoy, off_market_in_two_weeks_mom, off_market_in_two_weeks_yoy, last_updated
+- Drop Columns - off_market_in_two_weeks, parent_metro_region,	parent_metro_region_metro_code
+- Create table – housing_data_by_state_by_month
+- Drop Columns - median_sale_price, median_list_price, median_ppsf,	median_list_ppsf,	median_dom,	avg_sale_to_list
+- Add Primary Key to ‘housing_data_by_state_by_month’ Table
+- Add Foreign Key to ‘housing_data_by_state_by_month’ Table
+- Drop Tables - housing_data, housing_data_2020_2021_by_state
+
+
+
+
+
+#### Covid Data
 
 ### Reasons why we selected the topic:
  -  There is a perception that COVID-19 had immensely effected the housing market all over the United States, our project will discover if that anology is correct and their correlation
@@ -40,7 +60,11 @@
 
 ### Data visualization tools: Tableau
 - We used Tableau to create the Dashboard
- ![Tableau Dashboard 1.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/COVID_Cases_Screenshot_1.png)
+ ![Tableau Dashboard 1.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/COVID_CALTER TABLE housing_data_2020_2021_by_state 
+DROP COLUMN	off_market_in_two_weeks,
+DROP COLUMN parent_metro_region,
+DROP COLUMN	parent_metro_region_metro_code;
+ases_Screenshot_1.png)
  ![Tableau Dashboard 2.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/COVID_Case_Screenshot_2.png)
 
 
