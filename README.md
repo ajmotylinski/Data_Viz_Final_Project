@@ -16,6 +16,8 @@
 ### Data Cleaning and Preprocessing-SQL: 
 #### Data Cleaned, but Not Used
 -  We originally cleaned a couple datasets from https://github.com/nytimes/covid-19-data before realizing the data was cummulative and didn't meet our needs
+-  We did not include the details of the data cleaning for this in the readme as we did not use this in our code, but the details are included on SQL for Table Creations and SQL for Table Creations #2 in the GitHub.
+
 #### Housing Data
 - Create Table – housing_data_2020_2021_by_state
 - Table Column – period_begin_month_year
@@ -36,11 +38,22 @@
 - Add Foreign Key to ‘housing_data_by_state_by_month’ Table
 - Drop Tables - housing_data, housing_data_2020_2021_by_state
 
-
-
-
-
 #### Covid Data
+- Create Table - covid_daily_info
+- Create Table - covid_daily_info_by_month
+- Extract month from submission_date as 'period_begin_month'
+- Extract year from submission_date as 'period_begin_year'
+- Concatenate 'period_begin_month' '-' 'period_begin_year' as 'period_begin_month_year'
+- Concatenate 'period_begin_month_year' with 'state' as 'covid_month_year_state'
+- Sum(new_case + pnew_case) as cases
+- Sum(new_death + pnew_death) as deaths
+- Filter states to MN, CA, WA, TX & FL
+- Filter submission_date >= '2020-01-01' and submission_date < '2022-01-01'
+- Drop Table - covid_daily_info
+- Update Table Name from ‘covid_daily_info_by_month’ to ‘covid_daily_info’
+- Add Primary Key to covid_daily_info
+- Add Foreign Key to Add Primary Key to covid_daily_info
+- Join Tables covid_daily_info and states
 
 ### Reasons why we selected the topic:
  -  There is a perception that COVID-19 had immensely effected the housing market all over the United States, our project will discover if that anology is correct and their correlation
