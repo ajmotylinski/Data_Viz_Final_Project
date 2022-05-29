@@ -73,11 +73,7 @@
 
 ### Data visualization tools: Tableau
 - We used Tableau to create the Dashboard
- ![Tableau Dashboard 1.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/COVID_CALTER TABLE housing_data_2020_2021_by_state 
-DROP COLUMN	off_market_in_two_weeks,
-DROP COLUMN parent_metro_region,
-DROP COLUMN	parent_metro_region_metro_code;
-ases_Screenshot_1.png)
+ ![Tableau Dashboard 1.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/COVID_Cases_Screenshot_1.png)
  ![Tableau Dashboard 2.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/COVID_Case_Screenshot_2.png)
 
 
