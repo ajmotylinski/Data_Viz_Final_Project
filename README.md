@@ -59,7 +59,7 @@
  -  We want to understand how COVID-19 impacts the housing market
  
 ### Questions We Hope to Answer:
-- What is the relationship between COVID-19 cases and the housing market by a selection of states (CA, WA, TX, FL, MN) 
+- What is the relationship between COVID-19 cases and the housing market by a selection of SELECTED states (CA, WA, TX, FL, MN) 
 
 ### Machine Learning Model: Unsupervised 
 - Using Jupyter Notebook to connect to the SQL database
