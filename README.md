@@ -9,7 +9,7 @@
 - Obtained US State and state abbreviation dataset from [scottechnology.com/list_of_50_state](https://scottontechnology.com/alphabetical-50-us-states-abbreviations-list/)
 
 
-#### SQL Database
+#### SQL Database:
 - We will be using SQL Database for this project (see screenshot below)
 - ![Database Screenshot Week 2.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/COVID_%26_HOUSING_DATABASE.png)
 
@@ -18,7 +18,7 @@
 -  We originally cleaned a couple datasets from https://github.com/nytimes/covid-19-data before realizing the data was cumulative and didn't meet our needs
 -  We did not include the details of the data cleaning for this in the readme as we did not use this in our code, but the details are included on SQL for Table Creations and SQL for Table Creations #2 in the GitHub.
 
-#### Housing Data
+#### Housing Data:
 - Create Table – housing_data_2020_2021_by_state
 - Table Column – period_begin_month_year
 - Drop Column - County
@@ -37,7 +37,7 @@
 - Add Foreign Key to ‘housing_data_by_state_by_month’ Table
 - Drop Tables - housing_data, housing_data_2020_2021_by_state
 
-#### Covid Data
+#### Covid Data:
 - Create Table - covid_daily_info
 - Create Table - covid_daily_info_by_month
 - Extract month from submission_date as 'period_begin_month'
@@ -70,7 +70,7 @@
 - Output/Target: Number of COVID-19 cases and housing in the selected states
 - Output/Target: To determine if house prices decreased as the COVID-19 cases increased or decreased
 
-### Data Visualization Tools: Tableau
+### Data Visualization Tool: Tableau
 - We used Tableau to create the Dashboard
 - We added an interactive filter for state on the dashboard. The dashboard can display information for all states (MN, FL, TX, CA, WA) or any combination of them.
 - An action filter was also added to both the pie chart and the bar graph. If you select a single state on either of these the dashboard filters to show the details for that state.
@@ -78,7 +78,7 @@
  ![Tableau Dashboard 2.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/COVID_Case_Screenshot_2.png)
 
 
-### Team Communication Protocols
+### Team Communication Protocols:
 - Slack channel for team members
 - Zoom for live collaboration
 - Tues/Thurs during class time
