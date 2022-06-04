@@ -18,7 +18,7 @@
 -  We originally cleaned a couple datasets from https://github.com/nytimes/covid-19-data before realizing the data was cumulative and didn't meet our needs
 -  We did not include the details of the data cleaning for this in the readme as we did not use this in our code, but the details are included on SQL for Table Creations and SQL for Table Creations #2 in the GitHub.
 
-#### Housing Data
+#### Housing Data:
 - Create Table – housing_data_2020_2021_by_state
 - Table Column – period_begin_month_year
 - Drop Column - County
@@ -37,7 +37,7 @@
 - Add Foreign Key to ‘housing_data_by_state_by_month’ Table
 - Drop Tables - housing_data, housing_data_2020_2021_by_state
 
-#### Covid Data
+#### Covid Data:
 - Create Table - covid_daily_info
 - Create Table - covid_daily_info_by_month
 - Extract month from submission_date as 'period_begin_month'
@@ -78,7 +78,7 @@
  ![Tableau Dashboard 2.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/COVID_Case_Screenshot_2.png)
 
 
-### Team Communication Protocols
+### Team Communication Protocols:
 - Slack channel for team members
 - Zoom for live collaboration
 - Tues/Thurs during class time
