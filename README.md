@@ -9,7 +9,7 @@
 - Obtained US State and state abbreviation dataset from [scottechnology.com/list_of_50_state](https://scottontechnology.com/alphabetical-50-us-states-abbreviations-list/)
 
 
-#### SQL Database
+#### SQL Database:
 - We will be using SQL Database for this project (see screenshot below)
 - ![Database Screenshot Week 2.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/COVID_%26_HOUSING_DATABASE.png)
 
