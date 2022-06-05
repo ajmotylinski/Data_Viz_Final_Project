@@ -11,7 +11,7 @@
 
 #### SQL Database:
 - We will be using SQL Database for this project (see screenshot below)
-- ![Database Screenshot Week 2.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/COVID_%26_HOUSING_DATABASE.png)
+
 
 ### Data Cleaning and Preprocessing-SQL: 
 #### Data Cleaned, but Not Used
@@ -61,21 +61,25 @@
 ### Questions We Hope to Answer:
 - What is the relationship between COVID-19 cases and the housing market by a selection of SELECTED states (CA, WA, TX, FL, MN) 
 
-### Machine Learning Model: Unsupervised 
-- Using Jupyter Notebook to connect to the SQL database
+### Machine Learning Models:  
+- Using Jupyter Notebook to connect to the Postgres database or import CSV file.  
 - Using Clustering (k-means) as the unsupervised machine learning model. This model was chosen to help identify how the data is clustered together. 
   - Benefits of k-means is that is it easy to use and works well on large datasets. It also works well with different shapes and sizes of clusters.
   - Limits of k-means is that the number of clusters need to be select before the model. This can be mitigated by looking at the elbow curve to determine the optimal number of clusters. Outliers could have a significant impact on the clusters.
 - Inputs: COVID-19 cases, deaths and the housing data
 - Output/Target: Number of COVID-19 cases and housing in the selected states
-- Output/Target: To determine if house prices decreased as the COVID-19 cases increased or decreased
+- Logistic Regression was used to classify the number of homes sold in a month into 1 of 4 categories
+- Random Forest Classifier was used to classify the number of homes sold in a month into 1 of 4 categories
+
+The major changes between segment 2 and 3 was that we binned the number of houses sold into 4 categories. We used the describe to determine the quartiles and then chose the edges accordingly. After we did that we were able to run our logistic regression and our random forest classifier on the dataset. We were able to get positive results with the liblinear solver which the documentation says is better with small datasets. We had planned to try out some deep learning using the Keras tuner but we had a small dataset which wouldn't be sufficient for deep learning. 
+
+At this point the model is pretty locked in and we don't anticipate any changes in the next few days prior to our final presentation. 
+The random forest classifier is giving us great overall results at 97% prediction and 97% recall. The bin of 50,001-70,000 does have a lower recall amount of 67% though.
 
 ### Data Visualization Tool: Tableau
 - We used Tableau to create the Dashboard
 - We added an interactive filter for state on the dashboard. The dashboard can display information for all states (MN, FL, TX, CA, WA) or any combination of them.
 - An action filter was also added to both the pie chart and the bar graph. If you select a single state on either of these the dashboard filters to show the details for that state.
- ![Tableau Dashboard 1.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/COVID_Cases_Screenshot_1.png)
- ![Tableau Dashboard 2.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/COVID_Case_Screenshot_2.png)
 
 
 ### Team Communication Protocols:
