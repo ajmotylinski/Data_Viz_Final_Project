@@ -70,7 +70,11 @@
 - Output/Target: Number of COVID-19 cases and housing in the selected states
 - Logistic Regression was used to classify the number of homes sold in a month into 1 of 4 categories
 - Random Forest Classifier was used to classify the number of homes sold in a month into 1 of 4 categories
-The major changes between segment 2 and 3 was that we binned the number of houses sold into 4 categories. We used the describe to determine the quartiles and then chose the edges accordingly. After we did that we were able to run our logistic regression and our random forest classifier on the dataset. We were able to get positive results with the liblinear solver which the documentation says is better with small datasets.
+
+The major changes between segment 2 and 3 was that we binned the number of houses sold into 4 categories. We used the describe to determine the quartiles and then chose the edges accordingly. After we did that we were able to run our logistic regression and our random forest classifier on the dataset. We were able to get positive results with the liblinear solver which the documentation says is better with small datasets. We had planned to try out some deep learning using the Keras tuner but we had a small dataset which wouldn't be sufficient for deep learning. 
+
+At this point the model is pretty locked in and we don't anticipate any changes in the next few days prior to our final presentation. 
+The random forest classifier is giving us great overall results at 97% prediction and 97% recall. The bin of 50,001-70,000 does have a lower recall amount of 67% though.
 
 ### Data Visualization Tool: Tableau
 - We used Tableau to create the Dashboard
