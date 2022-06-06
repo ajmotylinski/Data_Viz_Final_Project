@@ -81,9 +81,10 @@ At this point the model is pretty locked in and we don't anticipate any changes 
 The random forest classifier is giving us great overall results at 97% prediction and 97% recall. The bin of 50,001-70,000 does have a lower recall amount of 67% though.
 
 ### Data Visualization Tool: Tableau
-- We used Tableau to create the Dashboard
-- We added an interactive filter for state on the dashboard. The dashboard can display information for all states (MN, FL, TX, CA, WA) or any combination of them.
-- An action filter was also added to both the pie chart and the bar graph. If you select a single state on either of these the dashboard filters to show the details for that state.
+#### Tableau Dashboard based on CSV Files From Source
+- We used Tableau to create the Dashboards
+- We added  interactive filters for state and date on the dashboard. The dashboard can display information for all states (MN, FL, TX, CA, WA) or any combination of them.
+- An action filter was also added to both pie charts and the bar graph. If you select a single state on any of these the dashboard filters all graphs to display the details for that state.
 ![COVID Housing 1.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/COVID%20%26%20Housing%201.png)  
 ![COVID Housing 2.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/COVID%20%26%20Housing%202.png)  
 ![COVID Housing 3.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/COVID%20%26%20Housing%203.png)  
