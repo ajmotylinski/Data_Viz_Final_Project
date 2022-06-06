@@ -78,16 +78,23 @@ We checked for any null values and we did find some null values. We did find tha
 ### housing_df
 We ran a series of checks in our housing_df and found that there was not any null values. We also checked the format of each column and all columns were in the correct format.
 
+### Merging covid_df and housing_df
+For our machine learning we needed to add covid cases and deaths to our data. We merged our covid_df and housing_df on based a key that was generated in the postgres database. Our two datasets had some duplicate columns (e.g. month, year, state) that were replicated in the output dataframe, covid_housing_df. To handle this situation, the suffix "\_y" was added.  Using the drop function of pandas and a regex to drop all columns that contained "\_y"
+
 ## Feature Engineering
 ## Split into Training and Test Sets
 ## Model Choice
+### K-Means
 Using Clustering (k-means) as the unsupervised machine learning model. This model was chosen to help identify how the data is clustered together. 
   - Benefits of k-means is that is it easy to use and works well on large datasets. It also works well with different shapes and sizes of clusters.
   - Limits of k-means is that the number of clusters need to be select before the model. This can be mitigated by looking at the elbow curve to determine the optimal number of clusters. Outliers could have a significant impact on the clusters.
 - Inputs: COVID-19 cases, deaths and the housing data
 - Output/Target: Number of COVID-19 cases and housing in the selected states
-- Logistic Regression was used to classify the number of homes sold in a month into 1 of 4 categories
-- Random Forest Classifier was used to classify the number of homes sold in a month into 1 of 4 categories
+### Logistic Regression
+Logistic Regression was used to classify the number of homes sold in a month into 1 of 4 categories
+### Random Forest Classifier
+Random Forest Classifier was used to classify the number of homes sold in a month into 1 of 4 categories
+
 ## Model Changes
 The major changes between segment 2 and 3 was that we binned the number of houses sold into 4 categories. We used the describe to determine the quartiles and then chose the edges accordingly. After we did that we were able to run our logistic regression and our random forest classifier on the dataset. We were able to get positive results with the liblinear solver which the documentation says is better with small datasets. We had planned to try out some deep learning using the Keras tuner but we had a small dataset which wouldn't be sufficient for deep learning. 
 ## Training
