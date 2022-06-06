@@ -17,7 +17,7 @@
 - We will be using SQL Database for this project (see screenshot below)
 ![Database Screenshot.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/Database%20Screenshot.png)  
 
-- ERD
+## ERD
 - ![erd.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/erd.png)  
 # Data Cleaning and Preprocessing-SQL: 
 ## Data Cleaned, but Not Used
@@ -70,16 +70,16 @@
 # Machine Learning Models
 ## Data preprocessing
 For data preprocessing we have two options to get the data. We have the option to connect to a Postgres DB as well as importing a CSV file. The user just needs to comment/uncomment the desired way of interacting with the data. The default code is to import a CSV that is pulling from the Resources folder. There are two dataframes that are generated: covid_df and housing_df.
-
 ### covid_df 
 There was some data processing that was needed to make the data usable in our analysis. 
 We checked for any null values and we did find some null values. We did find that 7 records have null values in our covid_df so we filled these with 0. When the dataframe was created we noticed that some fields were objects rather than numeric. We had to cast month, year, cases, and deaths as integers to confirm that they were seen as number during our analysis.
-
 ### housing_df
 We ran a series of checks in our housing_df and found that there was not any null values. We also checked the format of each column and all columns were in the correct format.
-
 ### Merging covid_df and housing_df
 For our machine learning we needed to add covid cases and deaths to our data. We merged our covid_df and housing_df on based a key that was generated in the postgres database. Our two datasets had some duplicate columns (e.g. month, year, state) that were replicated in the output dataframe, covid_housing_df. To handle this situation, the suffix "\_y" was added.  Using the drop function of pandas and a regex to drop all columns that contained "\_y"
+### Binning
+For the analysis around the number of monthly home sales we wanted to bin based on the quartiles of the data. We used the describe to find the bins of <20K, 20K-50K, 50K-70K, 70K+ monthly home sales. 
+![bin.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/bin.png)  
 
 ## Feature Engineering
 ## Split into Training and Test Sets
