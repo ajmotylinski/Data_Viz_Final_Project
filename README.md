@@ -7,22 +7,22 @@
 - [Data Source Dashboard](https://public.tableau.com/app/profile/april.vilmin/viz/CovidHousing/COVIDHOUSING?publish=yes)
 - [Machine Learning Dashboard](https://public.tableau.com/app/profile/april.vilmin/viz/CovidHousingMachineLearning/MachineLearning?publish=yes)
 
-### Data Source:
+# Data Source:
 - COVID-19 Data: https://healthdata.gov/dataset/United-States-COVID-19-Cases-and-Deaths-by-State-o/hiyb-zgc2
 - Housing Data: https://www.kaggle.com/code/thuynyle/hawai-i-s-housing-market-post-covid/data
 - Obtained US State and state abbreviation dataset from [scottechnology.com/list_of_50_state](https://scottontechnology.com/alphabetical-50-us-states-abbreviations-list/)
 
 
-#### SQL Database:
+# SQL Database:
 - We will be using SQL Database for this project (see screenshot below)
 ![Database Screenshot.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/Database%20Screenshot.png)  
 
-### Data Cleaning and Preprocessing-SQL: 
-#### Data Cleaned, but Not Used
+# Data Cleaning and Preprocessing-SQL: 
+## Data Cleaned, but Not Used
 -  We originally cleaned a couple datasets from https://github.com/nytimes/covid-19-data before realizing the data was cumulative and didn't meet our needs
 -  We did not include the details of the data cleaning for this in the readme as we did not use this in our code, but the details are included on SQL for Table Creations and SQL for Table Creations #2 in the GitHub.
 
-#### Housing Data:
+## Housing Data:
 - Create Table – housing_data_2020_2021_by_state
 - Table Column – period_begin_month_year
 - Drop Column - County
@@ -41,7 +41,7 @@
 - Add Foreign Key to ‘housing_data_by_state_by_month’ Table
 - Drop Tables - housing_data, housing_data_2020_2021_by_state
 
-#### Covid Data:
+## Covid Data:
 - Create Table - covid_daily_info
 - Create Table - covid_daily_info_by_month
 - Extract month from submission_date as 'period_begin_month'
@@ -58,11 +58,11 @@
 - Add Foreign Key to Add Primary Key to covid_daily_info
 - Join Tables covid_daily_info and states
 
-### Reason(s) Why We Selected the Topic:
+# Reason(s) Why We Selected the Topic:
  -  There is a perception that COVID-19 had immensely affected the housing market all over the United States, our project will discover if that analogy is correct and their correlation
  -  We want to understand how COVID-19 impacts the housing market
  
-### Questions We Hope to Answer:
+# Questions We Hope to Answer:
 - What is the relationship between COVID-19 cases and the housing market by a selection of SELECTED states (CA, WA, TX, FL, MN) 
 
 # Machine Learning Models
@@ -85,8 +85,8 @@ The major changes between segment 2 and 3 was that we binned the number of house
 At this point the model is pretty locked in and we don't anticipate any changes in the next few days prior to our final presentation. 
 The random forest classifier is giving us great overall results at 97% prediction and 97% recall. The bin of 50,001-70,000 does have a lower recall amount of 67% though.
 
-### Data Visualization Tool: Tableau
-#### Tableau Dashboard Based on CSV Files From Source
+# Data Visualization Tool: Tableau
+## Tableau Dashboard Based on CSV Files From Source
 - We used Tableau to create the Dashboards
 - We added  interactive filters for state and date on the dashboard. The dashboard can display information for all states (MN, FL, TX, CA, WA) or any combination of them.
 - Action filters were added to both pie charts and the bar graph. If you select a single state on any of these the dashboard filters all graphs to display the details for that state.
@@ -96,7 +96,7 @@ The random forest classifier is giving us great overall results at 97% predictio
 ![COVID Housing 4.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/COVID%20%26%20Housing%204.png)  
 ![COVID Housing 5.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/COVID%20%26%20Housing%205.png) 
 
-#### Tableau Dashboard For Machine Learning
+## Tableau Dashboard For Machine Learning
 - We also chose to display our machine learning visualizations in Tableau.
 ![Elbow Curve.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/Elbow%20Curve.png)  
 ![Scatter Plot 1.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/Scatter%20Plot%201.png)  
@@ -108,7 +108,7 @@ The random forest classifier is giving us great overall results at 97% predictio
 ![Random Forest Classifier.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/Random%20Forest%20Classifier.png)  
 
 
-### Team Communication Protocols:
+# Team Communication Protocols:
 - Slack channel for team members
 - Zoom for live collaboration
 - Tues/Thurs during class time
