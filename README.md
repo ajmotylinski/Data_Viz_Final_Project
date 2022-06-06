@@ -82,7 +82,11 @@ For the analysis around the number of monthly home sales we wanted to bin based 
 ![bin.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/bin.png)  
 
 ## Feature Engineering
+
 ## Split into Training and Test Sets
+For the Logistic Regression and Random Forest Classifier we used the default values for train_test_split
+
+
 ## Model Choice
 ### K-Means
 Using Clustering (k-means) as the unsupervised machine learning model. This model was chosen to help identify how the data is clustered together. 
