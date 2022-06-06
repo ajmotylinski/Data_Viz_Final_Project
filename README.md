@@ -92,7 +92,7 @@ The random forest classifier is giving us great overall results at 97% predictio
 ![COVID Housing 5.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/COVID%20%26%20Housing%205.png) 
 
 #### Tableau Dashboard For Machine Learning
-
+- We also chose to display our machine learning visualizations in Tableau.
 ![Elbow Curve.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/Elbow%20Curve.png)  
 ![Scatter Plot 1.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/Scatter%20Plot%201.png)  
 ![Scatter Plot 2.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/Scatter%20Plot%202.png)  
