@@ -15,6 +15,10 @@
 - Housing Data: https://www.kaggle.com/code/thuynyle/hawai-i-s-housing-market-post-covid/data
 - Obtained US State and state abbreviation dataset from [scottechnology.com/list_of_50_state](https://scottontechnology.com/alphabetical-50-us-states-abbreviations-list/)
 
+# Data Exploration Phase:
+- Extracted data from multiple sources
+- Tranformed data into tables in pgAdmin. Creating Dataframes and merging them
+- Analyzed data using different machine learing modules.
 
 # SQL Database:
 - We will be using SQL Database for this project (see screenshot below)
