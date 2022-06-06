@@ -3,6 +3,9 @@
 ### Presentation Link
 - [Google Slides](https://docs.google.com/presentation/d/1bv3LSd37Qxwq-3BTp1zodWL7fH8tMsefu9D7WUe0sQY/edit?usp=sharing)
 
+### Technologies Used
+![image](https://user-images.githubusercontent.com/96274446/172249658-8891490b-16d3-4b65-9738-37128116d79d.png)
+
 ### Dashbaord Links
 - [Data Source Dashboard](https://public.tableau.com/app/profile/april.vilmin/viz/CovidHousing/COVIDHOUSING?publish=yes)
 - [Machine Learning Dashboard](https://public.tableau.com/app/profile/april.vilmin/viz/CovidHousingMachineLearning/MachineLearning?publish=yes)
@@ -68,26 +71,24 @@
 - What is the relationship between COVID-19 cases and the housing market by a selection of SELECTED states (CA, WA, TX, FL, MN) 
 
 # Machine Learning Models
-## Data preprocessing
+### Pre-liminary Data Preprocessing
 For data preprocessing we have two options to get the data. We have the option to connect to a Postgres DB as well as importing a CSV file. The user just needs to comment/uncomment the desired way of interacting with the data. The default code is to import a CSV that is pulling from the Resources folder. There are two dataframes that are generated: covid_df and housing_df.
-### covid_df 
+#### covid_df 
 There was some data processing that was needed to make the data usable in our analysis. 
 We checked for any null values and we did find some null values. We did find that 7 records have null values in our covid_df so we filled these with 0. When the dataframe was created we noticed that some fields were objects rather than numeric. We had to cast month, year, cases, and deaths as integers to confirm that they were seen as number during our analysis.
-### housing_df
+#### housing_df
 We ran a series of checks in our housing_df and found that there was not any null values. We also checked the format of each column and all columns were in the correct format.
-### Merging covid_df and housing_df
+#### Merging covid_df and housing_df
 For our machine learning we needed to add covid cases and deaths to our data. We merged our covid_df and housing_df on based a key that was generated in the postgres database. Our two datasets had some duplicate columns (e.g. month, year, state) that were replicated in the output dataframe, covid_housing_df. To handle this situation, the suffix "\_y" was added.  Using the drop function of pandas and a regex to drop all columns that contained "\_y"
-### Binning
+#### Binning
 For the analysis around the number of monthly home sales we wanted to bin based on the quartiles of the data. We used the describe to find the bins of <20K, 20K-50K, 50K-70K, 70K+ monthly home sales. 
 ![bin.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/bin.png)  
 
 ## Feature Engineering
+### Split into Training and Test Sets
+For our final the Logistic Regression and Random Forest Classifier we used the 80/20 train_test_split to achieve our results 
 
-## Split into Training and Test Sets
-For the Logistic Regression and Random Forest Classifier we used the default values for train_test_split
-
-
-## Model Choice
+## Explanation of Model Choice (Including Limitations and Benefits)
 ### K-Means
 Using Clustering (k-means) as the unsupervised machine learning model. This model was chosen to help identify how the data is clustered together. 
   - Benefits of k-means is that is it easy to use and works well on large datasets. It also works well with different shapes and sizes of clusters.
