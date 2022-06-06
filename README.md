@@ -84,7 +84,11 @@ The random forest classifier is giving us great overall results at 97% predictio
 - We used Tableau to create the Dashboard
 - We added an interactive filter for state on the dashboard. The dashboard can display information for all states (MN, FL, TX, CA, WA) or any combination of them.
 - An action filter was also added to both the pie chart and the bar graph. If you select a single state on either of these the dashboard filters to show the details for that state.
-
+![COVID Housing 1.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/COVID%20%26%20Housing%201.png)  
+![COVID Housing 2.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/COVID%20%26%20Housing%202.png)  
+![COVID Housing 3.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/COVID%20%26%20Housing%203.png)  
+![COVID Housing 4.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/COVID%20%26%20Housing%204.png)  
+![COVID Housing 5.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/COVID%20%26%20Housing%205.png) 
 
 ### Team Communication Protocols:
 - Slack channel for team members
