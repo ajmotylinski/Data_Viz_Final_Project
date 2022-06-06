@@ -3,6 +3,10 @@
 ### Presentation Link
 [Google Slides Here](https://docs.google.com/presentation/d/1bv3LSd37Qxwq-3BTp1zodWL7fH8tMsefu9D7WUe0sQY/edit?usp=sharing)
 
+### Dashbaord Links
+[Data Source Dashboard](https://docs.google.com/presentation/d/1bv3LSd37Qxwq-3BTp1zodWL7fH8tMsefu9D7WUe0sQY/edit?usp=sharing)
+[Machine Learning Dashboard](https://public.tableau.com/app/profile/april.vilmin/viz/CovidHousingMachineLearning/MachineLearning?publish=yes)
+
 ### Data Source:
 - COVID-19 Data: https://healthdata.gov/dataset/United-States-COVID-19-Cases-and-Deaths-by-State-o/hiyb-zgc2
 - Housing Data: https://www.kaggle.com/code/thuynyle/hawai-i-s-housing-market-post-covid/data
