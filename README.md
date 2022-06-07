@@ -6,7 +6,7 @@
 ### Technologies Used
 ![image](https://user-images.githubusercontent.com/96274446/172249658-8891490b-16d3-4b65-9738-37128116d79d.png)
 
-### Dashbaord Links
+### Dashboard Links
 - [Data Source Dashboard](https://public.tableau.com/app/profile/april.vilmin/viz/CovidHousing/COVIDHOUSING?publish=yes)
 - [Machine Learning Dashboard](https://public.tableau.com/app/profile/april.vilmin/viz/CovidHousingMachineLearning/MachineLearning?publish=yes)
 
@@ -101,18 +101,47 @@ Using Clustering (k-means) as the unsupervised machine learning model. This mode
   - Limits of k-means is that the number of clusters need to be select before the model. This can be mitigated by looking at the elbow curve to determine the optimal number of clusters. Outliers could have a significant impact on the clusters.
 ### Logistic Regression
 Logistic Regression was used to classify the number of homes sold in a month into 1 of 4 categories
-- Benefits -
+Benefits:
+- Logistic regression is easy to impement. It also can be used for multiple classes.
+Limitations:
+- Logistic regression could be prone to overfitting if the number of feature less than observations.   
+- Cannot used for non linear problems.
 
  
 ### Random Forest Classifier
 Random Forest Classifier was used to classify the number of homes sold in a month into 1 of 4 categories
+Benifits:
+- Random Forest is a bagging algorithm and uses Ensemble Learning technique. It creates as many trees on the subset of the data and combines the output of all the trees. Thus, reduces overfitting problem in decision trees and also reduces the variance and therefore improves the accuracy.
+- Random Forest can be used to solve both classification and regression problems.
+- Random Forest worked well with both categorical and continues variables.
+- Random Forest can automatically handle missing values.
+Limitations:
+- Random forest creates a lot of trees and combines their outputs. To do so, algorithm requires more computational power and resources.
+- It requires more time comparitively to train as it generates a lot of trees.
+Application to our project:
+- With a small dataset Random Forest Classifying is helpful becuase it creates n number of trees and combines the output from those trees to address overfitting.
+- Our data is categorical so it fits well with Random Forest Classifier models.
+
 
 ## Model Changes
-The major changes between segment 2 and 3 was that we binned the number of houses sold into 4 categories. We used the describe to determine the quartiles and then chose the edges accordingly. After we did that we were able to run our logistic regression and our random forest classifier on the dataset. We were able to get positive results with the liblinear solver which the documentation says is better with small datasets. We had planned to try out some deep learning using the Keras tuner but we had a small dataset which wouldn't be sufficient for deep learning. 
+- The major changes between segment 2 and 3 was that we binned the number of houses sold into 4 categories. We used the describe to determine the quartiles and then chose the edges accordingly. After we did that we were able to run our logistic regression and our random forest classifier on the dataset. We were able to get positive results with the liblinear solver which the documentation says is better with small datasets. We had planned to try out some deep learning using the Keras tuner but we had a small dataset which wouldn't be sufficient for deep learning. 
 ## Training
+- We used the binned number of houses sold as the target. We split this into our target variable y and then removed it from our X dataframe. 
+- We scaled our data after it was split into train and test sets. 
+- Initial training tried the lbfgs sovler got us initial results for both Random Forest Classifier and Logistic Regression
+- Further research found that libliner was a better fit for our models due to the small sample size.
+
 ## Accuracy score
 At this point the model is pretty locked in and we don't anticipate any changes in the next few days prior to our final presentation. 
 The random forest classifier is giving us great overall results at 97% prediction and 97% recall. The bin of 50,001-70,000 does have a lower recall amount of 67% though.
+### SMOTEEN
+![SMOTEEN Confusion Matrix.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/SMOTEEN%20-%20Confusion%20Matrix.png)  
+
+### SMOTE
+![SMOTE.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/SMOTE.png)  
+
+### Random Forest Classifier
+![Random Forest Classifier.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/Random%20Forest%20Classifier.png)  
 
 # Data Visualization Tool: Tableau
 ## Tableau Dashboard Based on CSV Files From Source
@@ -132,9 +161,7 @@ The random forest classifier is giving us great overall results at 97% predictio
 ![Scatter Plot 2.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/Scatter%20Plot%202.png)  
 ![Scatter Plot 3.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/Scatter%20Plot%203.png)  
 ![3D Scatter.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/3D%20Scatter.png) 
-![SMOTEEN Confusion Matrix.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/SMOTEEN%20-%20Confusion%20Matrix.png)  
-![SMOTE.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/SMOTE.png)  
-![Random Forest Classifier.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/Random%20Forest%20Classifier.png)  
+
 
 
 # Team Communication Protocols:
