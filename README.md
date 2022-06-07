@@ -6,7 +6,7 @@
 ### Technologies Used
 ![image](https://user-images.githubusercontent.com/96274446/172249658-8891490b-16d3-4b65-9738-37128116d79d.png)
 
-### Dashbaord Links
+### Dashboard Links
 - [Data Source Dashboard](https://public.tableau.com/app/profile/april.vilmin/viz/CovidHousing/COVIDHOUSING?publish=yes)
 - [Machine Learning Dashboard](https://public.tableau.com/app/profile/april.vilmin/viz/CovidHousingMachineLearning/MachineLearning?publish=yes)
 
@@ -76,42 +76,77 @@
 
 # Machine Learning Models
 ### Pre-liminary Data Preprocessing
-For data preprocessing we have two options to get the data. We have the option to connect to a Postgres DB as well as importing a CSV file. The user just needs to comment/uncomment the desired way of interacting with the data. The default code is to import a CSV that is pulling from the Resources folder. There are two dataframes that are generated: covid_df and housing_df.
+- For data preprocessing we have two options to get the data. We have the option to connect to a Postgres DB as well as importing a CSV file. The user just needs to comment/uncomment the desired way of interacting with the data. The default code is to import a CSV that is pulling from the Resources folder. There are two dataframes that are generated: covid_df and housing_df.
 #### covid_df 
-There was some data processing that was needed to make the data usable in our analysis. 
+- There was some data processing that was needed to make the data usable in our analysis. 
 We checked for any null values and we did find some null values. We did find that 7 records have null values in our covid_df so we filled these with 0. When the dataframe was created we noticed that some fields were objects rather than numeric. We had to cast month, year, cases, and deaths as integers to confirm that they were seen as number during our analysis.
 #### housing_df
-We ran a series of checks in our housing_df and found that there was not any null values. We also checked the format of each column and all columns were in the correct format.
+- We ran a series of checks in our housing_df and found that there was not any null values. We also checked the format of each column and all columns were in the correct format.
 #### Merging covid_df and housing_df
-For our machine learning we needed to add covid cases and deaths to our data. We merged our covid_df and housing_df on based a key that was generated in the postgres database. Our two datasets had some duplicate columns (e.g. month, year, state) that were replicated in the output dataframe, covid_housing_df. To handle this situation, the suffix "\_y" was added.  Using the drop function of pandas and a regex to drop all columns that contained "\_y"
+- For our machine learning we needed to add covid cases and deaths to our data. We merged our covid_df and housing_df on based a key that was generated in the postgres database. Our two datasets had some duplicate columns (e.g. month, year, state) that were replicated in the output dataframe, covid_housing_df. To handle this situation, the suffix "\_y" was added.  Using the drop function of pandas and a regex to drop all columns that contained "\_y"
 
 ## Feature Engineering and Feature Selection
 #### Binning
 - We used Binning as out Feature engineering tool. For the analysis around the number of monthly home sales we wanted to bin based on the quartiles of the data. We used the describe to find the bins of <20K, 20K-50K, 50K-70K, 70K+ monthly home sales. 
 ![bin.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/bin.png)  
-- For our feature selection, after we merged the dataframes, we encoded to get dummies. Our columes and rows were 120,20 respectively
+- State attributes were encoded using Panda's get_dummies function.
 
 ### Split into Training and Test Sets
-For our final the Logistic Regression and Random Forest Classifier we used the 80/20 train_test_split to achieve our results 
+- The datasets was split into a training set and test set using train_test_split from sklearn using a test size of 25% and train size of 75%
 
 ## Explanation of Model Choice (Including Limitations and Benefits)
 ### K-Means
 Using Clustering (k-means) as the unsupervised machine learning model. This model was chosen to help identify how the data is clustered together. 
   - Benefits of k-means is that is it easy to use and works well on large datasets. It also works well with different shapes and sizes of clusters.
   - Limits of k-means is that the number of clusters need to be select before the model. This can be mitigated by looking at the elbow curve to determine the optimal number of clusters. Outliers could have a significant impact on the clusters.
-- Inputs: COVID-19 cases, deaths and the housing data
-- Output/Target: Number of COVID-19 cases and housing in the selected states
 ### Logistic Regression
 Logistic Regression was used to classify the number of homes sold in a month into 1 of 4 categories
+Benefits:
+- Logistic regression is easy to impement. It also can be used for multiple classes.
+Limitations:
+- Logistic regression could be prone to overfitting if the number of feature less than observations.   
+- Cannot used for non linear problems.
+
+ 
 ### Random Forest Classifier
 Random Forest Classifier was used to classify the number of homes sold in a month into 1 of 4 categories
+Benifits:
+- Random Forest is a bagging algorithm and uses Ensemble Learning technique. It creates as many trees on the subset of the data and combines the output of all the trees. Thus, reduces overfitting problem in decision trees and also reduces the variance and therefore improves the accuracy.
+- Random Forest can be used to solve both classification and regression problems.
+- Random Forest worked well with both categorical and continues variables.
+- Random Forest can automatically handle missing values.
+Limitations:
+- Random forest creates a lot of trees and combines their outputs. To do so, algorithm requires more computational power and resources.
+- It requires more time comparitively to train as it generates a lot of trees.
+Application to our project:
+- With a small dataset Random Forest Classifying is helpful becuase it creates n number of trees and combines the output from those trees to address overfitting.
+- Our data is categorical so it fits well with Random Forest Classifier models.
+
 
 ## Model Changes
-The major changes between segment 2 and 3 was that we binned the number of houses sold into 4 categories. We used the describe to determine the quartiles and then chose the edges accordingly. After we did that we were able to run our logistic regression and our random forest classifier on the dataset. We were able to get positive results with the liblinear solver which the documentation says is better with small datasets. We had planned to try out some deep learning using the Keras tuner but we had a small dataset which wouldn't be sufficient for deep learning. 
+- The major changes between segment 2 and 3 was that we binned the number of houses sold into 4 categories. We used the describe to determine the quartiles and then chose the edges accordingly. After we did that we were able to run our logistic regression and our random forest classifier on the dataset. We were able to get positive results with the liblinear solver which the documentation says is better with small datasets. We had planned to try out some deep learning using the Keras tuner but we had a small dataset which wouldn't be sufficient for deep learning. 
 ## Training
+- We used the binned number of houses sold as the target. We split this into our target variable y and then removed it from our X dataframe. 
+- We scaled our data after it was split into train and test sets. 
+- Initial training tried the lbfgs sovler got us initial results for both Random Forest Classifier and Logistic Regression
+- Further research found that libliner was a better fit for our models due to the small sample size.
+
 ## Accuracy score
-At this point the model is pretty locked in and we don't anticipate any changes in the next few days prior to our final presentation. 
-The random forest classifier is giving us great overall results at 97% prediction and 97% recall. The bin of 50,001-70,000 does have a lower recall amount of 67% though.
+
+### SMOTEEN Classification Report
+Using SMOTEEN to balance our data, we found prediction to be 94% with a recall of 93%. The monthly sales over 70K proved to have the lowest prediction. The recall was the worst in the bin 50K-70K.
+
+![SMOTEEN Confusion Matrix.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/SMOTEEN%20-%20Confusion%20Matrix.png)  
+
+### SMOTE Classification Report
+Using SMOTE to balance our data, we found prediction to be 89% with a recall of 90%. The prediction for the 50K-70K category had the worst at 50% accruacty and 33% sensitivity.
+
+![SMOTE.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/SMOTE.png)  
+
+### Random Forest Classifier Classification Report
+The random forest classifier is currently our best model with overall results at 97% prediction and 97% recall. The bin of 50,001-70,000 does have a lower recall amount of 67% though. 
+
+![Random Forest Classifier.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/Random%20Forest%20Classifier.png)  
 
 # Data Visualization Tool: Tableau
 ## Tableau Dashboard Based on CSV Files From Source
@@ -131,9 +166,7 @@ The random forest classifier is giving us great overall results at 97% predictio
 ![Scatter Plot 2.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/Scatter%20Plot%202.png)  
 ![Scatter Plot 3.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/Scatter%20Plot%203.png)  
 ![3D Scatter.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/3D%20Scatter.png) 
-![SMOTEEN Confusion Matrix.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/SMOTEEN%20-%20Confusion%20Matrix.png)  
-![SMOTE.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/SMOTE.png)  
-![Random Forest Classifier.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/Random%20Forest%20Classifier.png)  
+
 
 
 # Team Communication Protocols:
