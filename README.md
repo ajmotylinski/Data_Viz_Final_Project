@@ -101,10 +101,9 @@ Using Clustering (k-means) as the unsupervised machine learning model. This mode
   - Limits of k-means is that the number of clusters need to be select before the model. This can be mitigated by looking at the elbow curve to determine the optimal number of clusters. Outliers could have a significant impact on the clusters.
 ### Logistic Regression
 Logistic Regression was used to classify the number of homes sold in a month into 1 of 4 categories
-- Benefits
+- Benefits -
 
--- Easy to implement and train
--- 
+ 
 ### Random Forest Classifier
 Random Forest Classifier was used to classify the number of homes sold in a month into 1 of 4 categories
 
