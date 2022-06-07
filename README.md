@@ -2,14 +2,20 @@
 
 ### Presentation Link
 - [Google Slides](https://docs.google.com/presentation/d/1bv3LSd37Qxwq-3BTp1zodWL7fH8tMsefu9D7WUe0sQY/edit?usp=sharing)
+- ### Dashboard Links
+- [Data Source Dashboard](https://public.tableau.com/app/profile/april.vilmin/viz/CovidHousing/COVIDHOUSING?publish=yes)
+- [Machine Learning Dashboard](https://public.tableau.com/app/profile/april.vilmin/viz/CovidHousingMachineLearning/MachineLearning?publish=yes)
 
 ### Technologies Used
 ![image](https://user-images.githubusercontent.com/96274446/172249658-8891490b-16d3-4b65-9738-37128116d79d.png)
 
-### Dashboard Links
-- [Data Source Dashboard](https://public.tableau.com/app/profile/april.vilmin/viz/CovidHousing/COVIDHOUSING?publish=yes)
-- [Machine Learning Dashboard](https://public.tableau.com/app/profile/april.vilmin/viz/CovidHousingMachineLearning/MachineLearning?publish=yes)
-
+# Reason(s) Why We Selected the Topic:
+ -  There is a perception that COVID-19 had immensely affected the housing market all over the United States, our project will discover if that analogy is correct and their correlation
+ -  We want to understand how COVID-19 impacts the housing market
+ - 
+# Questions We Hope to Answer:
+- What is the relationship between COVID-19 cases and the housing market by a selection of SELECTED states (CA, WA, TX, FL, MN) 
+-
 # Data Source:
 - COVID-19 Data: https://healthdata.gov/dataset/United-States-COVID-19-Cases-and-Deaths-by-State-o/hiyb-zgc2
 - Housing Data: https://www.kaggle.com/code/thuynyle/hawai-i-s-housing-market-post-covid/data
@@ -26,12 +32,13 @@
 
 ## ERD
 - ![erd.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/erd.png)  
+- 
 # Data Cleaning and Preprocessing-SQL: 
 ## Data Cleaned, but Not Used
 -  We originally cleaned a couple datasets from https://github.com/nytimes/covid-19-data before realizing the data was cumulative and didn't meet our needs
 -  We did not include the details of the data cleaning for this in the readme as we did not use this in our code, but the details are included on SQL for Table Creations and SQL for Table Creations #2 in the GitHub.
 
-## Housing Data:
+### Housing Data:
 - Create Table – housing_data_2020_2021_by_state
 - Table Column – period_begin_month_year
 - Drop Column - County
@@ -50,7 +57,7 @@
 - Add Foreign Key to ‘housing_data_by_state_by_month’ Table
 - Drop Tables - housing_data, housing_data_2020_2021_by_state
 
-## Covid Data:
+### Covid Data:
 - Create Table - covid_daily_info
 - Create Table - covid_daily_info_by_month
 - Extract month from submission_date as 'period_begin_month'
@@ -66,13 +73,6 @@
 - Add Primary Key to covid_daily_info
 - Add Foreign Key to Add Primary Key to covid_daily_info
 - Join Tables covid_daily_info and states
-
-# Reason(s) Why We Selected the Topic:
- -  There is a perception that COVID-19 had immensely affected the housing market all over the United States, our project will discover if that analogy is correct and their correlation
- -  We want to understand how COVID-19 impacts the housing market
- 
-# Questions We Hope to Answer:
-- What is the relationship between COVID-19 cases and the housing market by a selection of SELECTED states (CA, WA, TX, FL, MN) 
 
 # Machine Learning Models
 ### Preliminary Data Preprocessing
@@ -121,7 +121,6 @@ Limitations:
 Application to our project:
 - With a small dataset Random Forest Classifying is helpful becuase it creates n number of trees and combines the output from those trees to address overfitting.
 - Our data is categorical so it fits well with Random Forest Classifier models.
-
 
 ## Model Changes
 - The major changes between segment 2 and 3 was that we binned the number of houses sold into 4 categories. We used the describe to determine the quartiles and then chose the edges accordingly. After we did that we were able to run our logistic regression and our random forest classifier on the dataset. We were able to get positive results with the liblinear solver which the documentation says is better with small datasets. We had planned to try out some deep learning using the Keras tuner but we had a small dataset which wouldn't be sufficient for deep learning. 
