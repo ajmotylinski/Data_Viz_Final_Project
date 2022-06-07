@@ -75,7 +75,7 @@
 - What is the relationship between COVID-19 cases and the housing market by a selection of SELECTED states (CA, WA, TX, FL, MN) 
 
 # Machine Learning Models
-### Pre-liminary Data Preprocessing
+### Preliminary Data Preprocessing
 - For data preprocessing we have two options to get the data. We have the option to connect to a Postgres DB as well as importing a CSV file. The user just needs to comment/uncomment the desired way of interacting with the data. The default code is to import a CSV that is pulling from the Resources folder. There are two dataframes that are generated: covid_df and housing_df.
 #### covid_df 
 - There was some data processing that was needed to make the data usable in our analysis. 
