@@ -134,13 +134,13 @@ Application to our project:
 ## Accuracy score
 At this point the model is pretty locked in and we don't anticipate any changes in the next few days prior to our final presentation. 
 The random forest classifier is giving us great overall results at 97% prediction and 97% recall. The bin of 50,001-70,000 does have a lower recall amount of 67% though.
-### SMOTEEN
+### SMOTEEN Classification Report
 ![SMOTEEN Confusion Matrix.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/SMOTEEN%20-%20Confusion%20Matrix.png)  
 
-### SMOTE
+### SMOTE Classification Report
 ![SMOTE.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/SMOTE.png)  
 
-### Random Forest Classifier
+### Random Forest Classifier Classification Report
 ![Random Forest Classifier.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/Random%20Forest%20Classifier.png)  
 
 # Data Visualization Tool: Tableau
