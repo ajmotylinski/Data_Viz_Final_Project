@@ -1,16 +1,22 @@
 # Analyzing the Relationships Between COVID-19 and Housing Data
 ### Team Members
 [Drew Motylinski](https://github.com/ajmotylinski)
+
 [April Vilmin](https://github.com/AprilVilmin)
+
 [Ritesh Nimmagadda](https://github.com/riteshnimmagadda)
+
 [Sarah Lodien](https://github.com/SLODIEN88)
+
 --------------------------------
 ### Presentation Link
 [Google Slides](https://docs.google.com/presentation/d/1bv3LSd37Qxwq-3BTp1zodWL7fH8tMsefu9D7WUe0sQY/edit?usp=sharing)
+
 ---------------------------------
 ### Dashboard Links
 [Data Source Dashboard](https://public.tableau.com/app/profile/april.vilmin/viz/CovidHousing/COVIDHOUSING?publish=yes)
 [Machine Learning Dashboard](https://public.tableau.com/app/profile/april.vilmin/viz/CovidHousingMachineLearning/MachineLearning?publish=yes)
+
 --------------------------------
 # Reason(s) Why We Selected the Topic:
  -  There is a perception that COVID-19 had immensely affected the housing market all over the United States, our project will discover if that analogy is correct and their correlation
@@ -35,6 +41,7 @@
 --------------------------------
 ## ERD
 ![erd.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/erd.png)  
+
 --------------------------------
 # Data Cleaning and Preprocessing SQL: 
 ## Data Cleaned, but Not Used
