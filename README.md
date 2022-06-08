@@ -35,9 +35,10 @@
 
 --------------------------------
 # Data Exploration Phase:
-- Extracted data from multiple sources
-- Tranformed data into tables in pgAdmin. Creating Dataframes and merging them
-- Analyzed data using different machine learing modules.
+- Extracted data from multiple sources.
+- Transformed data into tables in pgAdmin. 
+- Creating Dataframes and merging them.
+- Analyzed data using different machine learning modules.
 
 --------------------------------
 # SQL Database:
@@ -117,23 +118,23 @@ Using Clustering (k-means) as the unsupervised machine learning model. This mode
 ### Logistic Regression
 Logistic Regression was used to classify the number of homes sold in a month into 1 of 4 categories
 Benefits:
-- Logistic regression is easy to impement. It also can be used for multiple classes.
+- Logistic regression is easy to implement. It also can be used for multiple classes.
 Limitations:
 - Logistic regression could be prone to overfitting if the number of feature less than observations.   
 - Cannot used for non linear problems.
  
 ### Random Forest Classifier
 Random Forest Classifier was used to classify the number of homes sold in a month into 1 of 4 categories
-Benifits:
+Benefits:
 - Random Forest is a bagging algorithm and uses Ensemble Learning technique. It creates as many trees on the subset of the data and combines the output of all the trees. Thus, reduces overfitting problem in decision trees and also reduces the variance and therefore improves the accuracy.
 - Random Forest can be used to solve both classification and regression problems.
 - Random Forest worked well with both categorical and continues variables.
 - Random Forest can automatically handle missing values.
 Limitations:
 - Random forest creates a lot of trees and combines their outputs. To do so, algorithm requires more computational power and resources.
-- It requires more time comparitively to train as it generates a lot of trees.
+- It requires more time comparatively to train as it generates a lot of trees.
 Application to our project:
-- With a small dataset Random Forest Classifying is helpful becuase it creates n number of trees and combines the output from those trees to address overfitting.
+- With a small dataset Random Forest Classifying is helpful because it creates n number of trees and combines the output from those trees to address overfitting.
 - Our data is categorical so it fits well with Random Forest Classifier models.
 
 ## Model Changes
@@ -141,7 +142,7 @@ Application to our project:
 ## Training
 - We used the binned number of houses sold as the target. We split this into our target variable y and then removed it from our X dataframe. 
 - We scaled our data after it was split into train and test sets. 
-- Initial training tried the lbfgs sovler got us initial results for both Random Forest Classifier and Logistic Regression
+- Initial training tried the lbfgs solver got us initial results for both Random Forest Classifier and Logistic Regression
 - Further research found that libliner was a better fit for our models due to the small sample size.
 
 ## Accuracy score
@@ -156,12 +157,12 @@ The confusion matrix below shows the model correctly predicted 9 values in the <
 ![SMOTEEN Confusion Matrix.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/smoteen-CF.png) 
 
 
-### SMOTE Classification Report adn Confusion Matrix
-Using SMOTE to balance our data, we found prediction to be 89% with a recall of 90%. The prediction for the 50K-70K category had the worst at 50% accruacty and 33% sensitivity.
+### SMOTE Classification Report and Confusion Matrix
+Using SMOTE to balance our data, we found prediction to be 89% with a recall of 90%. The prediction for the 50K-70K category had the worst at 50% accuracy and 33% sensitivity.
 
 ![SMOTE.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/SMOTE.png)  
 
-The confusion matrix shows that SMOTE proved a worse at predictions becaseu there were more mis classifcations. This can be seen with the actual condiction of 20-50K.
+The confusion matrix shows that SMOTE proved a worse at predictions because there were more mis classifications. This can be seen with the actual condition of 20-50K.
 
 ![smote-CF.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/smote-CF.png)
 
