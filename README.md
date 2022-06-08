@@ -1,24 +1,46 @@
 # Analyzing the Relationships Between COVID-19 and Housing Data
-
+### Team Members
+- Drew Motylinski
+- April Vilmin
+- Ritesh Nimmagadda
+- Sarah Lodien
+--------------------------------
 ### Presentation Link
-[Google Slides Here](https://docs.google.com/presentation/d/1bv3LSd37Qxwq-3BTp1zodWL7fH8tMsefu9D7WUe0sQY/edit?usp=sharing)
-
-### Data Source:
+- [Google Slides](https://docs.google.com/presentation/d/1bv3LSd37Qxwq-3BTp1zodWL7fH8tMsefu9D7WUe0sQY/edit?usp=sharing)
+---------------------------------
+### Dashboard Links
+- [Data Source Dashboard](https://public.tableau.com/app/profile/april.vilmin/viz/CovidHousing/COVIDHOUSING?publish=yes)
+- [Machine Learning Dashboard](https://public.tableau.com/app/profile/april.vilmin/viz/CovidHousingMachineLearning/MachineLearning?publish=yes)
+--------------------------------
+# Reason(s) Why We Selected the Topic:
+ -  There is a perception that COVID-19 had immensely affected the housing market all over the United States, our project will discover if that analogy is correct and their correlation
+ -  We want to understand how COVID-19 impacts the housing market
+-------------------------------- 
+# Questions We Hope to Answer:
+- What is the relationship between COVID-19 cases and the housing market by a selection of SELECTED states (CA, WA, TX, FL, MN) 
+--------------------------------
+# Data Source:
 - COVID-19 Data: https://healthdata.gov/dataset/United-States-COVID-19-Cases-and-Deaths-by-State-o/hiyb-zgc2
 - Housing Data: https://www.kaggle.com/code/thuynyle/hawai-i-s-housing-market-post-covid/data
 - Obtained US State and state abbreviation dataset from [scottechnology.com/list_of_50_state](https://scottontechnology.com/alphabetical-50-us-states-abbreviations-list/)
-
-
-#### SQL Database:
+--------------------------------
+# Data Exploration Phase:
+- Extracted data from multiple sources
+- Tranformed data into tables in pgAdmin. Creating Dataframes and merging them
+- Analyzed data using different machine learing modules.
+--------------------------------
+# SQL Database:
 - We will be using SQL Database for this project (see screenshot below)
-- ![Database Screenshot Week 2.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/COVID_%26_HOUSING_DATABASE.png)
-
-### Data Cleaning and Preprocessing-SQL: 
-#### Data Cleaned, but Not Used
+![Database Screenshot.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/Database%20Screenshot.png)  
+--------------------------------
+## ERD
+- ![erd.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/erd.png)  
+--------------------------------
+# Data Cleaning and Preprocessing-SQL: 
+## Data Cleaned, but Not Used
 -  We originally cleaned a couple datasets from https://github.com/nytimes/covid-19-data before realizing the data was cumulative and didn't meet our needs
 -  We did not include the details of the data cleaning for this in the readme as we did not use this in our code, but the details are included on SQL for Table Creations and SQL for Table Creations #2 in the GitHub.
-
-#### Housing Data:
+### Housing Data:
 - Create Table – housing_data_2020_2021_by_state
 - Table Column – period_begin_month_year
 - Drop Column - County
@@ -36,8 +58,7 @@
 - Add Primary Key to ‘housing_data_by_state_by_month’ Table
 - Add Foreign Key to ‘housing_data_by_state_by_month’ Table
 - Drop Tables - housing_data, housing_data_2020_2021_by_state
-
-#### Covid Data:
+### Covid Data:
 - Create Table - covid_daily_info
 - Create Table - covid_daily_info_by_month
 - Extract month from submission_date as 'period_begin_month'
@@ -53,32 +74,126 @@
 - Add Primary Key to covid_daily_info
 - Add Foreign Key to Add Primary Key to covid_daily_info
 - Join Tables covid_daily_info and states
+--------------------------------
+# Machine Learning Models
+### Preliminary Data Preprocessing
+- For data preprocessing we have two options to get the data. We have the option to connect to a Postgres DB as well as importing a CSV file. The user just needs to comment/uncomment the desired way of interacting with the data. The default code is to import a CSV that is pulling from the Resources folder. There are two dataframes that are generated: covid_df and housing_df.
+#### covid_df 
+- There was some data processing that was needed to make the data usable in our analysis. 
+We checked for any null values and we did find some null values. We did find that 7 records have null values in our covid_df so we filled these with 0. When the dataframe was created we noticed that some fields were objects rather than numeric. We had to cast month, year, cases, and deaths as integers to confirm that they were seen as number during our analysis.
+#### housing_df
+- We ran a series of checks in our housing_df and found that there was not any null values. We also checked the format of each column and all columns were in the correct format.
+#### Merging covid_df and housing_df
+- For our machine learning we needed to add covid cases and deaths to our data. We merged our covid_df and housing_df on based a key that was generated in the postgres database. Our two datasets had some duplicate columns (e.g. month, year, state) that were replicated in the output dataframe, covid_housing_df. To handle this situation, the suffix "\_y" was added.  Using the drop function of pandas and a regex to drop all columns that contained "\_y"
 
-### Reason(s) Why We Selected the Topic:
- -  There is a perception that COVID-19 had immensely affected the housing market all over the United States, our project will discover if that analogy is correct and their correlation
- -  We want to understand how COVID-19 impacts the housing market
- 
-### Questions We Hope to Answer:
-- What is the relationship between COVID-19 cases and the housing market by a selection of SELECTED states (CA, WA, TX, FL, MN) 
+## Feature Engineering and Feature Selection
+#### Binning
+- We used Binning as out Feature engineering tool. For the analysis around the number of monthly home sales we wanted to bin based on the quartiles of the data. We used the describe to find the bins of <20K, 20K-50K, 50K-70K, 70K+ monthly home sales. 
+![bin.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/bin.png)  
+- State attributes were encoded using Panda's get_dummies function.
 
-### Machine Learning Model: Unsupervised 
-- Using Jupyter Notebook to connect to the SQL database
-- Using Clustering (k-means) as the unsupervised machine learning model. This model was chosen to help identify how the data is clustered together. 
+### Split into Training and Test Sets
+- The datasets was split into a training set and test set using train_test_split from sklearn using a test size of 25% and train size of 75%
+
+## Explanation of Model Choice (Including Limitations and Benefits)
+### K-Means
+Using Clustering (k-means) as the unsupervised machine learning model. This model was chosen to help identify how the data is clustered together. 
   - Benefits of k-means is that is it easy to use and works well on large datasets. It also works well with different shapes and sizes of clusters.
   - Limits of k-means is that the number of clusters need to be select before the model. This can be mitigated by looking at the elbow curve to determine the optimal number of clusters. Outliers could have a significant impact on the clusters.
-- Inputs: COVID-19 cases, deaths and the housing data
-- Output/Target: Number of COVID-19 cases and housing in the selected states
-- Output/Target: To determine if house prices decreased as the COVID-19 cases increased or decreased
+### Logistic Regression
+Logistic Regression was used to classify the number of homes sold in a month into 1 of 4 categories
+Benefits:
+- Logistic regression is easy to impement. It also can be used for multiple classes.
+Limitations:
+- Logistic regression could be prone to overfitting if the number of feature less than observations.   
+- Cannot used for non linear problems.
+ 
+### Random Forest Classifier
+Random Forest Classifier was used to classify the number of homes sold in a month into 1 of 4 categories
+Benifits:
+- Random Forest is a bagging algorithm and uses Ensemble Learning technique. It creates as many trees on the subset of the data and combines the output of all the trees. Thus, reduces overfitting problem in decision trees and also reduces the variance and therefore improves the accuracy.
+- Random Forest can be used to solve both classification and regression problems.
+- Random Forest worked well with both categorical and continues variables.
+- Random Forest can automatically handle missing values.
+Limitations:
+- Random forest creates a lot of trees and combines their outputs. To do so, algorithm requires more computational power and resources.
+- It requires more time comparitively to train as it generates a lot of trees.
+Application to our project:
+- With a small dataset Random Forest Classifying is helpful becuase it creates n number of trees and combines the output from those trees to address overfitting.
+- Our data is categorical so it fits well with Random Forest Classifier models.
 
-### Data Visualization Tool: Tableau
-- We used Tableau to create the Dashboard
-- We added an interactive filter for state on the dashboard. The dashboard can display information for all states (MN, FL, TX, CA, WA) or any combination of them.
-- An action filter was also added to both the pie chart and the bar graph. If you select a single state on either of these the dashboard filters to show the details for that state.
- ![Tableau Dashboard 1.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/COVID_Cases_Screenshot_1.png)
- ![Tableau Dashboard 2.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/COVID_Case_Screenshot_2.png)
+## Model Changes
+- The major changes between segment 2 and 3 was that we binned the number of houses sold into 4 categories. We used the describe to determine the quartiles and then chose the edges accordingly. After we did that we were able to run our logistic regression and our random forest classifier on the dataset. We were able to get positive results with the liblinear solver which the documentation says is better with small datasets. We had planned to try out some deep learning using the Keras tuner but we had a small dataset which wouldn't be sufficient for deep learning. 
+## Training
+- We used the binned number of houses sold as the target. We split this into our target variable y and then removed it from our X dataframe. 
+- We scaled our data after it was split into train and test sets. 
+- Initial training tried the lbfgs sovler got us initial results for both Random Forest Classifier and Logistic Regression
+- Further research found that libliner was a better fit for our models due to the small sample size.
+
+## Accuracy score
+
+### SMOTEEN Classification Report and Confusion Matrix
+Using SMOTEEN to balance our data, we found prediction to be 94% with a recall of 93%. The monthly sales over 70K proved to have the lowest prediction. The recall was the worst in the bin 50K-70K.
+
+![SMOTEEN Confusion Matrix.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/SMOTEEN%20-%20Confusion%20Matrix.png)  
+
+The confusion matrix below shows the model correctly predicted 9 values in the <20K category.  In the next category, 20k-50K, it correctly predicted 1, but incorrectly predicted 2.
+
+![SMOTEEN Confusion Matrix.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/smoteen-CF.png) 
 
 
-### Team Communication Protocols:
+### SMOTE Classification Report adn Confusion Matrix
+Using SMOTE to balance our data, we found prediction to be 89% with a recall of 90%. The prediction for the 50K-70K category had the worst at 50% accruacty and 33% sensitivity.
+
+![SMOTE.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/SMOTE.png)  
+
+The confusion matrix shows that SMOTE proved a worse at predictions becaseu there were more mis classifcations. This can be seen with the actual condiction of 20-50K.
+
+![smote-CF.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/smote-CF.png)
+
+### Random Forest Classifier Classification Report
+The random forest classifier is currently our best model with overall results at 97% prediction and 97% recall. The bin of 50,001-70,000 does have a lower recall amount of 67% though. 
+
+![Random Forest Classifier.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/Random%20Forest%20Classifier.png) 
+
+
+The confusion matrix for the Random Forest Classifier shows the best results. This can be see that there was only a single missed prediction across all categories.
+
+![rfc_CF.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/rfc-CF.png) 
+--------------------------------
+# Data Visualization Tool: Tableau
+## Tableau Dashboard Based on CSV Files From Source
+- We used Tableau to create the Dashboards
+- We added  interactive filters for state and date on the dashboard. The dashboard can display information for all states (MN, FL, TX, CA, WA) or any combination of them.
+- Action filters were added to both pie charts and the bar graph. If you select a single state on any of these the dashboard filters all graphs to display the details for that state.
+![COVID Housing 1.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/COVID%20%26%20Housing%201.png)  
+![COVID Housing 2.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/COVID%20%26%20Housing%202.png)  
+![COVID Housing 3.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/COVID%20%26%20Housing%203.png)  
+![COVID Housing 4.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/COVID%20%26%20Housing%204.png)  
+![COVID Housing 5.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/COVID%20%26%20Housing%205.png) 
+
+## Tableau Dashboard For Machine Learning
+- We also chose to display our machine learning visualizations in Tableau.
+![Elbow Curve.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/Elbow%20Curve.png)  
+![Scatter Plot 1.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/Scatter%20Plot%201.png)  
+![Scatter Plot 2.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/Scatter%20Plot%202.png)  
+![Scatter Plot 3.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/Scatter%20Plot%203.png)  
+![3D Scatter.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/3D%20Scatter.png) 
+--------------------------------
+### Tools and Technologies Used
+![image](https://user-images.githubusercontent.com/96274446/172510058-ae553bdc-fe3a-4a61-9aa2-ebde1b87ff1a.png)
+- PGADMIN
+- Random Forest Classifier (sklearn)
+- Logistic Regression (sklearn) 
+- KMeans (sklearn)
+- MatplotLib, Seaborn
+- Train Test SPlit
+- Plotly
+- HVPlot
+- Tensor Flow - tried but did not use in final work
+- SQLAlchemy
+--------------------------------
+# Team Communication Protocols:
 - Slack channel for team members
 - Zoom for live collaboration
 - Tues/Thurs during class time
