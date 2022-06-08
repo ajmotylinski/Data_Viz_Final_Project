@@ -195,7 +195,7 @@ The confusion matrix for the Random Forest Classifier shows the best results. Th
 ![3D Scatter.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/3D%20Scatter.png) 
 
 --------------------------------
-### Tools and Technologies Used
+## Tools and Technologies Used
 ![image](https://user-images.githubusercontent.com/96274446/172510058-ae553bdc-fe3a-4a61-9aa2-ebde1b87ff1a.png)
 - PGADMIN
 - Random Forest Classifier (sklearn)
