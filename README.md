@@ -6,8 +6,19 @@
 - [Data Source Dashboard](https://public.tableau.com/app/profile/april.vilmin/viz/CovidHousing/COVIDHOUSING?publish=yes)
 - [Machine Learning Dashboard](https://public.tableau.com/app/profile/april.vilmin/viz/CovidHousingMachineLearning/MachineLearning?publish=yes)
 
-### Technologies Used
-![image](https://user-images.githubusercontent.com/96274446/172249658-8891490b-16d3-4b65-9738-37128116d79d.png)
+### Tools and Technologies Used
+![image](https://user-images.githubusercontent.com/96274446/172510058-ae553bdc-fe3a-4a61-9aa2-ebde1b87ff1a.png)
+- PGADMIN
+- Random Forest Classifier (sklearn)
+- Logistic Regression (sklearn) 
+- KMeans (sklearn)
+- MatplotLib, Seaborn
+- Train Test SPlit
+- Plotly
+- HVPlot
+- Tensor Flow - tried but did not use in final work
+- SQLAlchemy
+
 
 # Reason(s) Why We Selected the Topic:
  -  There is a perception that COVID-19 had immensely affected the housing market all over the United States, our project will discover if that analogy is correct and their correlation
