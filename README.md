@@ -1,54 +1,45 @@
 # Analyzing the Relationships Between COVID-19 and Housing Data
-
+### Team Members
+- Drew Motylinski
+- April Vilmin,
+- Ritesh Nimmagadda
+- Sarah Lodien
+--------------------------------
 ### Presentation Link
 - [Google Slides](https://docs.google.com/presentation/d/1bv3LSd37Qxwq-3BTp1zodWL7fH8tMsefu9D7WUe0sQY/edit?usp=sharing)
+---------------------------------
 ### Dashboard Links
 - [Data Source Dashboard](https://public.tableau.com/app/profile/april.vilmin/viz/CovidHousing/COVIDHOUSING?publish=yes)
 - [Machine Learning Dashboard](https://public.tableau.com/app/profile/april.vilmin/viz/CovidHousingMachineLearning/MachineLearning?publish=yes)
-
-### Tools and Technologies Used
-![image](https://user-images.githubusercontent.com/96274446/172510058-ae553bdc-fe3a-4a61-9aa2-ebde1b87ff1a.png)
-- PGADMIN
-- Random Forest Classifier (sklearn)
-- Logistic Regression (sklearn) 
-- KMeans (sklearn)
-- MatplotLib, Seaborn
-- Train Test SPlit
-- Plotly
-- HVPlot
-- Tensor Flow - tried but did not use in final work
-- SQLAlchemy
-
-
+--------------------------------
 # Reason(s) Why We Selected the Topic:
  -  There is a perception that COVID-19 had immensely affected the housing market all over the United States, our project will discover if that analogy is correct and their correlation
  -  We want to understand how COVID-19 impacts the housing market
- 
+-------------------------------- 
 # Questions We Hope to Answer:
 - What is the relationship between COVID-19 cases and the housing market by a selection of SELECTED states (CA, WA, TX, FL, MN) 
-
+--------------------------------
 # Data Source:
 - COVID-19 Data: https://healthdata.gov/dataset/United-States-COVID-19-Cases-and-Deaths-by-State-o/hiyb-zgc2
 - Housing Data: https://www.kaggle.com/code/thuynyle/hawai-i-s-housing-market-post-covid/data
 - Obtained US State and state abbreviation dataset from [scottechnology.com/list_of_50_state](https://scottontechnology.com/alphabetical-50-us-states-abbreviations-list/)
-
+--------------------------------
 # Data Exploration Phase:
 - Extracted data from multiple sources
 - Tranformed data into tables in pgAdmin. Creating Dataframes and merging them
 - Analyzed data using different machine learing modules.
-
+--------------------------------
 # SQL Database:
 - We will be using SQL Database for this project (see screenshot below)
 ![Database Screenshot.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/Database%20Screenshot.png)  
-
+--------------------------------
 ## ERD
 - ![erd.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/erd.png)  
-- 
+--------------------------------
 # Data Cleaning and Preprocessing-SQL: 
 ## Data Cleaned, but Not Used
 -  We originally cleaned a couple datasets from https://github.com/nytimes/covid-19-data before realizing the data was cumulative and didn't meet our needs
 -  We did not include the details of the data cleaning for this in the readme as we did not use this in our code, but the details are included on SQL for Table Creations and SQL for Table Creations #2 in the GitHub.
-
 ### Housing Data:
 - Create Table – housing_data_2020_2021_by_state
 - Table Column – period_begin_month_year
@@ -67,7 +58,6 @@
 - Add Primary Key to ‘housing_data_by_state_by_month’ Table
 - Add Foreign Key to ‘housing_data_by_state_by_month’ Table
 - Drop Tables - housing_data, housing_data_2020_2021_by_state
-
 ### Covid Data:
 - Create Table - covid_daily_info
 - Create Table - covid_daily_info_by_month
@@ -84,7 +74,7 @@
 - Add Primary Key to covid_daily_info
 - Add Foreign Key to Add Primary Key to covid_daily_info
 - Join Tables covid_daily_info and states
-
+--------------------------------
 # Machine Learning Models
 ### Preliminary Data Preprocessing
 - For data preprocessing we have two options to get the data. We have the option to connect to a Postgres DB as well as importing a CSV file. The user just needs to comment/uncomment the desired way of interacting with the data. The default code is to import a CSV that is pulling from the Resources folder. There are two dataframes that are generated: covid_df and housing_df.
@@ -117,7 +107,6 @@ Benefits:
 Limitations:
 - Logistic regression could be prone to overfitting if the number of feature less than observations.   
 - Cannot used for non linear problems.
-
  
 ### Random Forest Classifier
 Random Forest Classifier was used to classify the number of homes sold in a month into 1 of 4 categories
@@ -158,7 +147,6 @@ Using SMOTE to balance our data, we found prediction to be 89% with a recall of 
 
 ![SMOTE.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/SMOTE.png)  
 
-
 The confusion matrix shows that SMOTE proved a worse at predictions becaseu there were more mis classifcations. This can be seen with the actual condiction of 20-50K.
 
 ![smote-CF.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/smote-CF.png)
@@ -172,7 +160,7 @@ The random forest classifier is currently our best model with overall results at
 The confusion matrix for the Random Forest Classifier shows the best results. This can be see that there was only a single missed prediction across all categories.
 
 ![rfc_CF.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/rfc-CF.png) 
-
+--------------------------------
 # Data Visualization Tool: Tableau
 ## Tableau Dashboard Based on CSV Files From Source
 - We used Tableau to create the Dashboards
@@ -191,9 +179,20 @@ The confusion matrix for the Random Forest Classifier shows the best results. Th
 ![Scatter Plot 2.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/Scatter%20Plot%202.png)  
 ![Scatter Plot 3.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/Scatter%20Plot%203.png)  
 ![3D Scatter.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/3D%20Scatter.png) 
-
-
-
+--------------------------------
+### Tools and Technologies Used
+![image](https://user-images.githubusercontent.com/96274446/172510058-ae553bdc-fe3a-4a61-9aa2-ebde1b87ff1a.png)
+- PGADMIN
+- Random Forest Classifier (sklearn)
+- Logistic Regression (sklearn) 
+- KMeans (sklearn)
+- MatplotLib, Seaborn
+- Train Test SPlit
+- Plotly
+- HVPlot
+- Tensor Flow - tried but did not use in final work
+- SQLAlchemy
+--------------------------------
 # Team Communication Protocols:
 - Slack channel for team members
 - Zoom for live collaboration
