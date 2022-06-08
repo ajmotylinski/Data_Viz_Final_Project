@@ -138,6 +138,7 @@ Using SMOTEEN to balance our data, we found prediction to be 94% with a recall o
 ![SMOTEEN Confusion Matrix.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/SMOTEEN%20-%20Confusion%20Matrix.png)  
 
 The confusion matrix below shows the model correctly predicted 9 values in the <20K category.  In the next category, 20k-50K, it correctly predicted 1, but incorrectly predicted 2.
+
 ![SMOTEEN Confusion Matrix.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/smoteen-CF.png) 
 
 
@@ -148,6 +149,7 @@ Using SMOTE to balance our data, we found prediction to be 89% with a recall of 
 
 
 The confusion matrix shows that SMOTE proved a worse at predictions becaseu there were more mis classifcations. This can be seen with the actual condiction of 20-50K.
+
 ![smote-CF.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/smote-CF.png)
 
 ### Random Forest Classifier Classification Report
@@ -157,6 +159,7 @@ The random forest classifier is currently our best model with overall results at
 
 
 The confusion matrix for the Random Forest Classifier shows the best results. This can be see that there was only a single missed prediction across all categories.
+
 ![rfc_CF.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/rfc-CF.png) 
 
 # Data Visualization Tool: Tableau
