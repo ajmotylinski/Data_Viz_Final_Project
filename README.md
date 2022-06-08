@@ -21,23 +21,28 @@
 # Reason(s) Why We Selected the Topic:
  -  There is a perception that COVID-19 had immensely affected the housing market all over the United States, our project will discover if that analogy is correct and their correlation
  -  We want to understand how COVID-19 impacts the housing market
+ 
 -------------------------------- 
 # Questions We Hope to Answer:
 - What is the relationship between COVID-19 cases and the housing market in the selected states (CA, WA, TX, FL, MN) 
+
 --------------------------------
 # Data Source:
 - COVID-19 Data: https://healthdata.gov/dataset/United-States-COVID-19-Cases-and-Deaths-by-State-o/hiyb-zgc2
 - Housing Data: https://www.kaggle.com/code/thuynyle/hawai-i-s-housing-market-post-covid/data
 - Obtained US State and state abbreviation dataset from [scottechnology.com/list_of_50_state](https://scottontechnology.com/alphabetical-50-us-states-abbreviations-list/)
+
 --------------------------------
 # Data Exploration Phase:
 - Extracted data from multiple sources
 - Tranformed data into tables in pgAdmin. Creating Dataframes and merging them
 - Analyzed data using different machine learing modules.
+
 --------------------------------
 # SQL Database:
 - We will be using SQL Database for this project (see screenshot below)
-![Database Screenshot.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/Database%20Screenshot.png)  
+![Database Screenshot.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/Database%20Screenshot.png) 
+
 --------------------------------
 ## ERD
 ![erd.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/erd.png)  
@@ -81,6 +86,7 @@
 - Add Primary Key to covid_daily_info
 - Add Foreign Key to Add Primary Key to covid_daily_info
 - Join Tables covid_daily_info and states
+
 --------------------------------
 # Machine Learning Models
 ### Preliminary Data Preprocessing
@@ -167,6 +173,7 @@ The random forest classifier is currently our best model with overall results at
 The confusion matrix for the Random Forest Classifier shows the best results. This can be see that there was only a single missed prediction across all categories.
 
 ![rfc_CF.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/rfc-CF.png) 
+
 --------------------------------
 # Data Visualization Tool: Tableau
 ## Tableau Dashboard Based on CSV Files From Source
@@ -186,6 +193,7 @@ The confusion matrix for the Random Forest Classifier shows the best results. Th
 ![Scatter Plot 2.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/Scatter%20Plot%202.png)  
 ![Scatter Plot 3.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/Scatter%20Plot%203.png)  
 ![3D Scatter.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/3D%20Scatter.png) 
+
 --------------------------------
 ### Tools and Technologies Used
 ![image](https://user-images.githubusercontent.com/96274446/172510058-ae553bdc-fe3a-4a61-9aa2-ebde1b87ff1a.png)
@@ -199,6 +207,7 @@ The confusion matrix for the Random Forest Classifier shows the best results. Th
 - HVPlot
 - Tensor Flow - tried but did not use in final work
 - SQLAlchemy
+
 --------------------------------
 # Team Communication Protocols:
 - Slack channel for team members
