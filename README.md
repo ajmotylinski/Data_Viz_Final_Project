@@ -143,7 +143,7 @@ Using SMOTEEN to balance our data, we found prediction to be 94% with a recall o
 Using SMOTE to balance our data, we found prediction to be 89% with a recall of 90%. The prediction for the 50K-70K category had the worst at 50% accruacty and 33% sensitivity.
 
 ![SMOTE.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/SMOTE.png)  
-![smote_CF.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/smote-cf.png)
+![smote-CF.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/smote-cf.png)
 
 ### Random Forest Classifier Classification Report
 The random forest classifier is currently our best model with overall results at 97% prediction and 97% recall. The bin of 50,001-70,000 does have a lower recall amount of 67% though. 
