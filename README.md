@@ -17,7 +17,7 @@
  -  We want to understand how COVID-19 impacts the housing market
 -------------------------------- 
 # Questions We Hope to Answer:
-- What is the relationship between COVID-19 cases and the housing market by a selection of SELECTED states (CA, WA, TX, FL, MN) 
+- What is the relationship between COVID-19 cases and the housing market in the selected states (CA, WA, TX, FL, MN) 
 --------------------------------
 # Data Source:
 - COVID-19 Data: https://healthdata.gov/dataset/United-States-COVID-19-Cases-and-Deaths-by-State-o/hiyb-zgc2
