@@ -36,7 +36,7 @@
 ## ERD
 ![erd.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/erd.png)  
 --------------------------------
-# Data Cleaning and Preprocessing-SQL: 
+# Data Cleaning and Preprocessing SQL: 
 ## Data Cleaned, but Not Used
 -  We originally cleaned a couple datasets from https://github.com/nytimes/covid-19-data before realizing the data was cumulative and didn't meet our needs
 -  We did not include the details of the data cleaning for this in the readme as we did not use this in our code, but the details are included on SQL for Table Creations and SQL for Table Creations #2 in the GitHub.
