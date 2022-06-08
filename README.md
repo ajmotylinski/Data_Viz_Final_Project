@@ -1,9 +1,9 @@
 # Analyzing the Relationships Between COVID-19 and Housing Data
 ### Team Members
-[Drew Motylinski] (https://github.com/ajmotylinski)
-[April Vilmin] (https://github.com/AprilVilmin)
-[Ritesh Nimmagadda] (https://github.com/riteshnimmagadda)
-[Sarah Lodien] (https://github.com/SLODIEN88)
+[Drew Motylinski](https://github.com/ajmotylinski)
+[April Vilmin](https://github.com/AprilVilmin)
+[Ritesh Nimmagadda](https://github.com/riteshnimmagadda)
+[Sarah Lodien](https://github.com/SLODIEN88)
 --------------------------------
 ### Presentation Link
 [Google Slides](https://docs.google.com/presentation/d/1bv3LSd37Qxwq-3BTp1zodWL7fH8tMsefu9D7WUe0sQY/edit?usp=sharing)
