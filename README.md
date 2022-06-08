@@ -1,7 +1,7 @@
 # Analyzing the Relationships Between COVID-19 and Housing Data
 ### Team Members
 - Drew Motylinski
-- April Vilmin,
+- April Vilmin
 - Ritesh Nimmagadda
 - Sarah Lodien
 --------------------------------
