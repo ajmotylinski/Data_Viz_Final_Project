@@ -163,7 +163,7 @@ Using SMOTE to balance our data, we found prediction to be 89% with a recall of 
 
 ![SMOTE.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/SMOTE.png)  
 
-The confusion matrix shows that SMOTE proved a worse at predictions because there were more mis classifications. This can be seen with the actual condition of 20-50K.
+The confusion matrix shows that SMOTE proved a worse at predictions because there were more misclassifications. This can be seen with the actual condition of 20-50K.
 
 ![smote-CF.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/smote-CF.png)
 
