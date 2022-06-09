@@ -144,7 +144,7 @@ Application to our project:
 - We used the binned number of houses sold as the target. We split this into our target variable y and then removed it from our X dataframe. 
 - We scaled our data after it was split into train and test sets. 
 - Initial training tried the lbfgs solver got us initial results for both Random Forest Classifier and Logistic Regression
-- Further research found that libliner was a better fit for our models due to the small sample size.
+- Further research found that liblinear was a better fit for our models due to the small sample size.
 
 ## Accuracy score
 
