@@ -1,43 +1,59 @@
 # Analyzing the Relationships Between COVID-19 and Housing Data
+### Team Members
+[Drew Motylinski](https://github.com/ajmotylinski)
 
+[April Vilmin](https://github.com/AprilVilmin)
+
+[Ritesh Nimmagadda](https://github.com/riteshnimmagadda)
+
+[Sarah Lodien](https://github.com/SLODIEN88)
+
+--------------------------------
 ### Presentation Link
-- [Google Slides](https://docs.google.com/presentation/d/1bv3LSd37Qxwq-3BTp1zodWL7fH8tMsefu9D7WUe0sQY/edit?usp=sharing)
+[Google Slides](https://docs.google.com/presentation/d/1bv3LSd37Qxwq-3BTp1zodWL7fH8tMsefu9D7WUe0sQY/edit?usp=sharing)
+
+---------------------------------
 ### Dashboard Links
-- [Data Source Dashboard](https://public.tableau.com/app/profile/april.vilmin/viz/CovidHousing/COVIDHOUSING?publish=yes)
-- [Machine Learning Dashboard](https://public.tableau.com/app/profile/april.vilmin/viz/CovidHousingMachineLearning/MachineLearning?publish=yes)
+[Data Source Dashboard](https://public.tableau.com/app/profile/april.vilmin/viz/CovidHousing/COVIDHOUSING?publish=yes)
 
-### Technologies Used
-![image](https://user-images.githubusercontent.com/96274446/172249658-8891490b-16d3-4b65-9738-37128116d79d.png)
+[Machine Learning Dashboard](https://public.tableau.com/app/profile/april.vilmin/viz/CovidHousingMachineLearning/MachineLearning?publish=yes)
 
+--------------------------------
 # Reason(s) Why We Selected the Topic:
  -  There is a perception that COVID-19 had immensely affected the housing market all over the United States, our project will discover if that analogy is correct and their correlation
  -  We want to understand how COVID-19 impacts the housing market
  
+-------------------------------- 
 # Questions We Hope to Answer:
-- What is the relationship between COVID-19 cases and the housing market by a selection of SELECTED states (CA, WA, TX, FL, MN) 
+- What is the relationship between COVID-19 cases and the housing market in the selected states (CA, WA, TX, FL, MN) 
 
+--------------------------------
 # Data Source:
 - COVID-19 Data: https://healthdata.gov/dataset/United-States-COVID-19-Cases-and-Deaths-by-State-o/hiyb-zgc2
 - Housing Data: https://www.kaggle.com/code/thuynyle/hawai-i-s-housing-market-post-covid/data
 - Obtained US State and state abbreviation dataset from [scottechnology.com/list_of_50_state](https://scottontechnology.com/alphabetical-50-us-states-abbreviations-list/)
 
+--------------------------------
 # Data Exploration Phase:
-- Extracted data from multiple sources
-- Tranformed data into tables in pgAdmin. Creating Dataframes and merging them
-- Analyzed data using different machine learing modules.
+- Extracted data from multiple sources.
+- Transformed data into tables in pgAdmin. 
+- Creating Dataframes and merging them.
+- Analyzed data using different machine learning modules.
 
+--------------------------------
 # SQL Database:
 - We will be using SQL Database for this project (see screenshot below)
-![Database Screenshot.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/Database%20Screenshot.png)  
+![Database Screenshot.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/Database%20Screenshot.png) 
 
+--------------------------------
 ## ERD
-- ![erd.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/erd.png)  
-- 
-# Data Cleaning and Preprocessing-SQL: 
+![erd.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/erd.png)  
+
+--------------------------------
+# Data Cleaning and Preprocessing SQL: 
 ## Data Cleaned, but Not Used
 -  We originally cleaned a couple datasets from https://github.com/nytimes/covid-19-data before realizing the data was cumulative and didn't meet our needs
 -  We did not include the details of the data cleaning for this in the readme as we did not use this in our code, but the details are included on SQL for Table Creations and SQL for Table Creations #2 in the GitHub.
-
 ### Housing Data:
 - Create Table – housing_data_2020_2021_by_state
 - Table Column – period_begin_month_year
@@ -74,6 +90,7 @@
 - Add Foreign Key to Add Primary Key to covid_daily_info
 - Join Tables covid_daily_info and states
 
+--------------------------------
 # Machine Learning Models
 ### Preliminary Data Preprocessing
 - For data preprocessing we have two options to get the data. We have the option to connect to a Postgres DB as well as importing a CSV file. The user just needs to comment/uncomment the desired way of interacting with the data. The default code is to import a CSV that is pulling from the Resources folder. There are two dataframes that are generated: covid_df and housing_df.
@@ -102,24 +119,23 @@ Using Clustering (k-means) as the unsupervised machine learning model. This mode
 ### Logistic Regression
 Logistic Regression was used to classify the number of homes sold in a month into 1 of 4 categories
 Benefits:
-- Logistic regression is easy to impement. It also can be used for multiple classes.
+- Logistic regression is easy to implement. It also can be used for multiple classes.
 Limitations:
 - Logistic regression could be prone to overfitting if the number of feature less than observations.   
 - Cannot used for non linear problems.
-
  
 ### Random Forest Classifier
 Random Forest Classifier was used to classify the number of homes sold in a month into 1 of 4 categories
-Benifits:
+Benefits:
 - Random Forest is a bagging algorithm and uses Ensemble Learning technique. It creates as many trees on the subset of the data and combines the output of all the trees. Thus, reduces overfitting problem in decision trees and also reduces the variance and therefore improves the accuracy.
 - Random Forest can be used to solve both classification and regression problems.
 - Random Forest worked well with both categorical and continues variables.
 - Random Forest can automatically handle missing values.
 Limitations:
 - Random forest creates a lot of trees and combines their outputs. To do so, algorithm requires more computational power and resources.
-- It requires more time comparitively to train as it generates a lot of trees.
+- It requires more time comparatively to train as it generates a lot of trees.
 Application to our project:
-- With a small dataset Random Forest Classifying is helpful becuase it creates n number of trees and combines the output from those trees to address overfitting.
+- With a small dataset Random Forest Classifying is helpful because it creates n number of trees and combines the output from those trees to address overfitting.
 - Our data is categorical so it fits well with Random Forest Classifier models.
 
 ## Model Changes
@@ -127,8 +143,8 @@ Application to our project:
 ## Training
 - We used the binned number of houses sold as the target. We split this into our target variable y and then removed it from our X dataframe. 
 - We scaled our data after it was split into train and test sets. 
-- Initial training tried the lbfgs sovler got us initial results for both Random Forest Classifier and Logistic Regression
-- Further research found that libliner was a better fit for our models due to the small sample size.
+- Initial training tried the lbfgs solver got us initial results for both Random Forest Classifier and Logistic Regression
+- Further research found that liblinear was a better fit for our models due to the small sample size.
 
 ## Accuracy score
 
@@ -142,13 +158,12 @@ The confusion matrix below shows the model correctly predicted 9 values in the <
 ![SMOTEEN Confusion Matrix.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/smoteen-CF.png) 
 
 
-### SMOTE Classification Report adn Confusion Matrix
-Using SMOTE to balance our data, we found prediction to be 89% with a recall of 90%. The prediction for the 50K-70K category had the worst at 50% accruacty and 33% sensitivity.
+### SMOTE Classification Report and Confusion Matrix
+Using SMOTE to balance our data, we found prediction to be 89% with a recall of 90%. The prediction for the 50K-70K category had the worst at 50% accuracy and 33% sensitivity.
 
 ![SMOTE.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/SMOTE.png)  
 
-
-The confusion matrix shows that SMOTE proved a worse at predictions becaseu there were more mis classifcations. This can be seen with the actual condiction of 20-50K.
+The confusion matrix shows that SMOTE proved a worse at predictions because there were more misclassifications. This can be seen with the actual condition of 20-50K.
 
 ![smote-CF.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/smote-CF.png)
 
@@ -162,6 +177,7 @@ The confusion matrix for the Random Forest Classifier shows the best results. Th
 
 ![rfc_CF.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/rfc-CF.png) 
 
+--------------------------------
 # Data Visualization Tool: Tableau
 ## Tableau Dashboard Based on CSV Files From Source
 - We used Tableau to create the Dashboards
@@ -181,8 +197,21 @@ The confusion matrix for the Random Forest Classifier shows the best results. Th
 ![Scatter Plot 3.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/Scatter%20Plot%203.png)  
 ![3D Scatter.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/3D%20Scatter.png) 
 
+--------------------------------
+## Tools and Technologies Used
+![image](https://user-images.githubusercontent.com/96274446/172510058-ae553bdc-fe3a-4a61-9aa2-ebde1b87ff1a.png)
+- PGADMIN
+- Random Forest Classifier (sklearn)
+- Logistic Regression (sklearn) 
+- KMeans (sklearn)
+- MatplotLib, Seaborn
+- Train Test SPlit
+- Plotly
+- HVPlot
+- Tensor Flow - tried but did not use in final work
+- SQLAlchemy
 
-
+--------------------------------
 # Team Communication Protocols:
 - Slack channel for team members
 - Zoom for live collaboration
