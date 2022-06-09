@@ -1,14 +1,14 @@
 # Analyzing the Relationships Between COVID-19 and Housing Data
-### Team Members
+### Team Members:
 - Drew Motylinski
 - April Vilmin
 - Ritesh Nimmagadda
 - Sarah Lodien
 --------------------------------
-### Presentation Link
+### Presentation Link:
 - [Google Slides](https://docs.google.com/presentation/d/1bv3LSd37Qxwq-3BTp1zodWL7fH8tMsefu9D7WUe0sQY/edit?usp=sharing)
 ---------------------------------
-### Dashboard Links
+### Dashboard Links:
 - [Data Source Dashboard](https://public.tableau.com/app/profile/april.vilmin/viz/CovidHousing/COVIDHOUSING?publish=yes)
 - [Machine Learning Dashboard](https://public.tableau.com/app/profile/april.vilmin/viz/CovidHousingMachineLearning/MachineLearning?publish=yes)
 --------------------------------
