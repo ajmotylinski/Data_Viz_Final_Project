@@ -212,6 +212,21 @@ The confusion matrix for the Random Forest Classifier shows the best results. Th
 - SQLAlchemy
 
 --------------------------------
+## Recommendation for Future Analysis
+- Categorize COVID-19 cases (e.g. low, medium, high)
+- Multiple linear regression to predict number of homes sold
+- Segment analysis by individual states
+- Further statistical analysis
+- Evaluate if the model is overfitting
+
+--------------------------------
+## What Would We Have Done Differently
+- Look for larger datasets to enable deep learning and other learning models
+- More robust COVID-19 data that included more attributes
+- We would have reduced the number of columns we removed and increased the number of remaining state, because the data we ended up with limited the type of solutions we could use.
+- We would have started with with discrete data instead of cumulative data so we didn’t have to do so much rework.
+
+--------------------------------
 # Team Communication Protocols:
 - Slack channel for team members
 - Zoom for live collaboration
