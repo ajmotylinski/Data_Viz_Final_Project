@@ -23,7 +23,7 @@
 - COVID-19 Data: https://healthdata.gov/dataset/United-States-COVID-19-Cases-and-Deaths-by-State-o/hiyb-zgc2
 - Housing Data: https://www.kaggle.com/code/thuynyle/hawai-i-s-housing-market-post-covid/data
 - Obtained US State and state abbreviation dataset from [scottechnology.com/list_of_50_state](https://scottontechnology.com/alphabetical-50-us-states-abbreviations-list/)
---------------------------------
+---------------------------------
 # Data Exploration Phase:
 - Extracted data from multiple sources
 - Tranformed data into tables in pgAdmin. Creating Dataframes and merging them
