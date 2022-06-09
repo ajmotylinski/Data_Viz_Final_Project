@@ -72,6 +72,7 @@
 - Add Primary Key to ‘housing_data_by_state_by_month’ Table
 - Add Foreign Key to ‘housing_data_by_state_by_month’ Table
 - Drop Tables - housing_data, housing_data_2020_2021_by_state
+
 ### Covid Data:
 - Create Table - covid_daily_info
 - Create Table - covid_daily_info_by_month
