@@ -41,7 +41,7 @@
 - Analyzed data using different machine learning modules.
 
 --------------------------------
-# SQL Database:
+# SQL Postgres Database:
 - We will be using SQL Database for this project (see screenshot below)
 ![Database Screenshot.png](https://github.com/ajmotylinski/Data_Viz_Final_Project/blob/main/Resources/Screenshots/Database%20Screenshot.png) 
 
